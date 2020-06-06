@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgth"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Places In India"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="50dp"
+            android:textSize="30sp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/worldback"
+            android:src="@drawable/ic_keyboard_backspace_black_24dp"
+            android:layout_marginStart="-340dp"
+            android:layout_marginTop="-30dp"/>
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:id="@+id/chailimage"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/chail" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:textSize="20sp"
+            android:text="Chail, Himachal Pradesh"/>
+        <ImageView
+            android:layout_width="350dp"
+            android:id="@+id/munnarimage"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/munnar" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            android:text="Munnar, Kerela"/>
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:id="@+id/piimage"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/pi" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:textSize="20sp"
+            android:text="Pithoragarh, Uttrakhand"/>
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:id="@+id/dzukouimage"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/dzukou" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:textSize="20sp"
+            android:text="Dzukou Valley, Nagaland"/>
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:id="@+id/valleyimage"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/valley_of_flowers" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:textSize="20sp"
+            android:text="Valley Of Flowers, Uttarakhand"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:text="Places Outside India"
+            android:textSize="30sp"/>
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:id="@+id/greatimage"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/great_barrier" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:textSize="20sp"
+            android:text="Great Barrier Reef, Australia"/>
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:id="@+id/palawanimage"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/palawan" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:textSize="20sp"
+            android:text="Palawan Island, Philippines"/>
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:id="@+id/moraineimage"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/moraine" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:textSize="20sp"
+            android:text="Morain Lake, Canada"/>
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:id="@+id/cliffsimage"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/cliffs_of_moher" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="25dp"
+            android:textSize="20sp"
+            android:text="Cliffs Of Moher, Ireland"/>
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:layout_marginStart="10dp"
+            android:id="@+id/iguazuimage"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/iguazu" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="30dp"
+            android:textSize="20sp"
+            android:text="Iguazu Falls, Argentina/Brazil Border"/>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

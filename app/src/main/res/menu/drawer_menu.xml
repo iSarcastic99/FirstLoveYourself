@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_articles"
+            android:icon="@drawable/ic_articles"
+            android:title="Articles" />
+        <item
+            android:id="@+id/nav_chat"
+            android:icon="@drawable/ic_chat"
+            android:title="Chat" />
+        <item
+            android:id="@+id/nav_videos"
+            android:icon="@drawable/ic_videos"
+            android:title="Videos" />
+        <item
+            android:id="@+id/nav_world_tour"
+            android:icon="@drawable/ic_world_tour"
+            android:title="World Tour"/>
+        <item
+            android:id="@+id/nav_events"
+            android:icon="@drawable/events"
+            android:title="Nearby Events"/>
+        <item
+            android:id="@+id/nav_counselor"
+            android:icon="@drawable/counselor"
+            android:title="Contact Counselor"/>
+        <item
+            android:id="@+id/logout_button"
+            android:icon="@drawable/ic_power_settings_new_black_24dp"
+            android:title="Logout" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_contact_us"
+                android:icon="@drawable/ic_contacts_black_24dp"
+                android:title="Contact Us" />
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/ic_feedback_black_24dp"
+                android:title="Feedback" />
+
+        </menu>
+    </item>
+
+
+</menu>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.nav">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Events"></activity>
+        <activity android:name=".Counselor" />
+        <activity android:name=".Humorous_Video_5" />
+        <activity android:name=".Humorous_Video_4" />
+        <activity android:name=".Humorous_Video_3" />
+        <activity android:name=".Humorous_Video_2" />
+        <activity android:name=".Humorous_Video_1" />
+        <activity android:name=".Motivational_Video_5" />
+        <activity android:name=".Motivational_Video_4" />
+        <activity android:name=".Motivational_Video_3" />
+        <activity android:name=".Motivational_Video_2" />
+        <activity android:name=".Motivational_Video_1" />
+        <activity android:name=".Login" />
+        <activity android:name=".Pithoragarh" />
+        <activity android:name=".Munnar" />
+        <activity android:name=".Valley_Of_Flowers" />
+        <activity android:name=".Dzukou" />
+        <activity android:name=".Chail" />
+        <activity android:name=".Cliffs_Of_Moher" />
+        <activity android:name=".Great_Barrier" />
+        <activity android:name=".Morain" />
+        <activity android:name=".Iguazu" />
+        <activity android:name=".Palawan" />
+        <activity android:name=".World_Tour" />
+        <activity android:name=".ContactUs" />
+        <activity android:name=".Feedback" />
+        <activity android:name=".HumorousVideos" />
+        <activity android:name=".MotivationalVideos" />
+        <activity android:name=".Article10" />
+        <activity android:name=".Article9" />
+        <activity android:name=".Article8" />
+        <activity android:name=".Article7" />
+        <activity android:name=".Article6" />
+        <activity android:name=".Article5" />
+        <activity android:name=".Article4" />
+        <activity android:name=".Article3" />
+        <activity android:name=".Article2" />
+        <activity android:name=".Article1" />
+        <activity android:name=".Intro">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Register" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".MessageFragment" />
+        <activity android:name=".ChatFragment" />
+        <activity android:name=".VideosFragment" />
+        <activity android:name=".ArticleFragment" />
+    </application>
+
+</manifest>
