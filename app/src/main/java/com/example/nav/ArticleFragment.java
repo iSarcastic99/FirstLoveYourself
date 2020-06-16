@@ -22,12 +22,13 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class ArticleFragment extends AppCompatActivity {
-    SearchView mySearchView;
+   // SearchView mySearchView;
     ListView myList;
     ArrayList<String> al = new ArrayList<>();
     ArrayList<String> arrlist;
     ImageView backarticle;
     int size;
+    SearchView mySearchView;
     String classes[] = {"Article1","Article2"};
     ArrayAdapter<String> arradapter;
     DatabaseReference reff;
@@ -44,27 +45,10 @@ public class ArticleFragment extends AppCompatActivity {
         backarticle = findViewById(R.id.articleback);
         arrlist = new ArrayList<>();
         Firebase.setAndroidContext(this);
-        DatabaseReference fbDb;
         pd = new ProgressDialog(ArticleFragment.this);
         pd.setMessage("Loading...");
         pd.show();
-        fbDb = FirebaseDatabase.getInstance().getReference();
-        fbDb.child("articles").addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                         size = (int) dataSnapshot.getChildrenCount();
-                         for(j=1;j<=size;j++) {
-                            String i = Integer.toString(j);
-                            arrlist.add(dataSnapshot.child("Article"+i).child("Title").getValue().toString());
-                            pd.dismiss();
-                        }
-                    }
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-                        pd.dismiss();
-                        Toast.makeText(ArticleFragment.this, "Please check your internet connection", Toast.LENGTH_SHORT).show();
-                    }
-                });
+        reff = FirebaseDatabase.getInstance().getReference();
 
         backarticle.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,8 +56,7 @@ public class ArticleFragment extends AppCompatActivity {
                 finish();
             }
         });
-        arradapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, arrlist);
-        myList.setAdapter(arradapter);
+
         mySearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -86,7 +69,26 @@ public class ArticleFragment extends AppCompatActivity {
                 return false;
             }
         });
-        mySearchView.performClick();
+
+        reff.child("articles").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                arradapter = new ArrayAdapter<>(ArticleFragment.this, android.R.layout.simple_list_item_1, arrlist);
+                myList.setAdapter(arradapter);
+                size = (int) dataSnapshot.getChildrenCount();
+                for(j=1;j<=size;j++) {
+                    String i = Integer.toString(j);
+                    arrlist.add(dataSnapshot.child("Article"+i).child("Title").getValue().toString());
+                    pd.dismiss();
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                pd.dismiss();
+                Toast.makeText(ArticleFragment.this, "Please check your internet connection", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         myList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
