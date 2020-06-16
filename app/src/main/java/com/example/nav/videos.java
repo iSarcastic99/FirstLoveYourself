@@ -31,7 +31,7 @@ public class videos extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "This is a Snackbar, Hardik!!!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
