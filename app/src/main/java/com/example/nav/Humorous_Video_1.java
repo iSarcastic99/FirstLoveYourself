@@ -103,7 +103,6 @@ public class Humorous_Video_1 extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-
         isPlaying = false;
         isFull = false;
     }

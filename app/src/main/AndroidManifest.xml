@@ -38,15 +38,6 @@
         <activity android:name=".Feedback" />
         <activity android:name=".HumorousVideos" />
         <activity android:name=".MotivationalVideos" />
-        <activity android:name=".Article10" />
-        <activity android:name=".Article9" />
-        <activity android:name=".Article8" />
-        <activity android:name=".Article7" />
-        <activity android:name=".Article6" />
-        <activity android:name=".Article5" />
-        <activity android:name=".Article4" />
-        <activity android:name=".Article3" />
-        <activity android:name=".Article2" />
         <activity android:name=".Article1" />
         <activity android:name=".Intro">
             <intent-filter>

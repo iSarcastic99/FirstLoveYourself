@@ -37,7 +37,6 @@ public class Munnar extends AppCompatActivity {
                 finish();
             }
         });
-
                 mapbutton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

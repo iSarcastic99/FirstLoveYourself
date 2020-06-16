@@ -16,7 +16,7 @@
         android:layout_marginStart="40dp"
         android:iconifiedByDefault="false"
         android:layout_marginBottom="40dp"
-        android:queryHint="Search Here"></SearchView>
+        android:queryHint="Search Here"/>
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,5 +35,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="-40dp"
         android:background="@drawable/bgf" />
 </LinearLayout>
