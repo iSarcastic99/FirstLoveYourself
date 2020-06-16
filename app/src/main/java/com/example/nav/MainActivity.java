@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (menuItem.getItemId()){
 
             case R.id.nav_videos:
-               Intent intent1 = new Intent(MainActivity.this,VideosFragment.class);
+               Intent intent1 = new Intent(MainActivity.this,videos.class);
                startActivity(intent1);
                break;
             case R.id.nav_world_tour:
