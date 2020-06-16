@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -48,8 +49,7 @@ public class ArticleFragment extends AppCompatActivity {
         pd.setMessage("Loading...");
         pd.show();
         fbDb = FirebaseDatabase.getInstance().getReference();
-        fbDb.child("articles")
-                .addListenerForSingleValueEvent(new ValueEventListener() {
+        fbDb.child("articles").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                          size = (int) dataSnapshot.getChildrenCount();
@@ -86,7 +86,7 @@ public class ArticleFragment extends AppCompatActivity {
                 return false;
             }
         });
-
+        mySearchView.performClick();
         myList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

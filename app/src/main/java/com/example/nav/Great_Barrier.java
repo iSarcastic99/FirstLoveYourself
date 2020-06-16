@@ -37,7 +37,6 @@ public class Great_Barrier extends AppCompatActivity {
                 finish();
             }
         });
-
         mapbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
