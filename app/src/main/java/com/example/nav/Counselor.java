@@ -12,8 +12,7 @@ public class Counselor extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_counselor);
-
-        backcounselor = findViewById(R.id.counselorback);
+        backcounselor = findViewById(R.id.contactback);
         backcounselor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

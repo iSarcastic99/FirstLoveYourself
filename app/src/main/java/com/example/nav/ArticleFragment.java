@@ -2,7 +2,6 @@ package com.example.nav;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -87,22 +86,6 @@ public class ArticleFragment extends AppCompatActivity {
                 return false;
             }
         });
-
-        for(j=1;j<=size;j++){
-            reff = FirebaseDatabase.getInstance().getReference().child("articles");
-            reff.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError databaseError) {
-                    Toast.makeText(ArticleFragment.this, "Please check your internet connection", Toast.LENGTH_SHORT).show();
-
-                }
-            });
-        }
 
         myList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
