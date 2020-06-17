@@ -9,22 +9,15 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:largeHeap="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".videos"
             android:label="@string/title_activity_videos"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".Events" />
         <activity android:name=".Counselor" />
-        <activity android:name=".Humorous_Video_5" />
-        <activity android:name=".Humorous_Video_4" />
-        <activity android:name=".Humorous_Video_3" />
-        <activity android:name=".Humorous_Video_2" />
         <activity android:name=".Humorous_Video_1" />
-        <activity android:name=".Motivational_Video_5" />
-        <activity android:name=".Motivational_Video_4" />
-        <activity android:name=".Motivational_Video_3" />
-        <activity android:name=".Motivational_Video_2" />
         <activity android:name=".Motivational_Video_1" />
         <activity android:name=".Login" />
         <activity android:name=".Pithoragarh" />
@@ -40,8 +33,6 @@
         <activity android:name=".World_Tour" />
         <activity android:name=".ContactUs" />
         <activity android:name=".Feedback" />
-        <activity android:name=".HumorousVideos" />
-        <activity android:name=".MotivationalVideos" />
         <activity android:name=".Article1" />
         <activity android:name=".Intro">
             <intent-filter>
@@ -54,7 +45,6 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".MessageFragment" />
         <activity android:name=".ChatFragment" />
-        <activity android:name=".VideosFragment" />
         <activity android:name=".ArticleFragment" />
     </application>
 

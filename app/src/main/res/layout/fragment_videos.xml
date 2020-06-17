@@ -20,10 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginTop="90dp"
-        android:src="@drawable/motivational_classic"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/motiv_button" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <ImageView
@@ -31,11 +29,9 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginTop="56dp"
-        android:src="@drawable/hum_classic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.0"
-        tools:srcCompat="@drawable/hum_classic" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </LinearLayout>

@@ -1,31 +1,50 @@
 package com.example.nav;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.LinearLayoutCompat;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.view.WindowManager;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.Toolbar;
 import android.widget.VideoView;
 
 import com.firebase.client.Firebase;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Humorous_Video_1 extends AppCompatActivity {
     VideoView videoView;
     ProgressDialog pd;
-    ImageView imgplay,fs,backhum1;
+    ImageView imgplay, fs, backhum1;
     ProgressBar pb;
-    TextView curr,tot;
-    int dur,current=0;
-    boolean isPlaying = false, isFull = false;
+    Intent intent;
+    TextView curr, tot, videoTitle;
+    int dur, current=0;
+    String Title, URL, VideoNumber;
+    DatabaseReference reff;
+    boolean isPlaying = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +53,9 @@ public class Humorous_Video_1 extends AppCompatActivity {
         Firebase.setAndroidContext(this);
         pd = new ProgressDialog(this);
         pd.setMessage("Loading...");
+        pd.show();
         backhum1 = findViewById(R.id.humback1);
+        videoTitle = findViewById(R.id.videotitle);
         videoView = findViewById(R.id.vView);
         pb = findViewById(R.id.humprogressBar1);
         pb.setMax(100);
@@ -43,18 +64,17 @@ public class Humorous_Video_1 extends AppCompatActivity {
         curr = findViewById(R.id.humcurrent1);
         tot = findViewById(R.id.humtotal1);
         imgplay = findViewById(R.id.playimg1);
+
+        intent = getIntent();
+        VideoNumber = intent.getStringExtra("videoNumber");
+        getVideo(VideoNumber);
         backhum1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-        final DisplayMetrics displayMetrics = new DisplayMetrics();
-        String str = "https://firebasestorage.googleapis.com/v0/b/flyapp-84c6a.appspot.com/o/Videos%2FHumorous%2F'Arabs'%20-%20Russell%20Peters%20-%20Red%2C%20White%2C%20and%20Brown.mp4?alt=media&token=d061e0ed-9de8-4a44-8592-62e9684ef927";
-        Uri uri = Uri.parse(str);
-        videoView.setVideoURI(uri);
-        videoView.requestFocus();
-        videoView.seekTo(1);
+
         videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
@@ -62,9 +82,11 @@ public class Humorous_Video_1 extends AppCompatActivity {
                     dur = mp.getDuration() / 1000;
                     String duration1 = String.format("%02d:%02d", dur / 60, dur % 60);
                     tot.setText(duration1);
-                }catch (Exception e){
-                 tot.setVisibility(View.INVISIBLE);
+                    pd.dismiss();
+                }catch(Exception e){
+                    tot.setVisibility(View.INVISIBLE);
                 }
+
             }
         });
         imgplay.setOnClickListener(new View.OnClickListener() {
@@ -98,13 +120,13 @@ public class Humorous_Video_1 extends AppCompatActivity {
             }
 
         });
+        imgplay.performClick();
 
     }
     @Override
     protected void onStop() {
         super.onStop();
         isPlaying = false;
-        isFull = false;
     }
     public class VideoProgress extends AsyncTask<Void, Integer, Void> {
 
@@ -135,16 +157,35 @@ public class Humorous_Video_1 extends AppCompatActivity {
                 pb.setProgress(currentPercent);
                 String currentString = String.format("%02d:%02d", ((values[0]) / 60), ((values[0]) % 60));
                 curr.setText(currentString);
-
             } catch (Exception e) {
                 curr.setVisibility(View.INVISIBLE);
             }
         }
-
     }
     @Override
     public void onBackPressed() {
         isPlaying = false;
         super.onBackPressed();
+    }
+    public void getVideo(final String videoNumber){
+        reff = FirebaseDatabase.getInstance().getReference().child("videos");
+        reff.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Title = dataSnapshot.child("Comedy"+videoNumber).child("Title").getValue().toString();
+                URL = dataSnapshot.child("Comedy"+videoNumber).child("URL").getValue().toString();
+                videoTitle.setText(Title);
+                Uri uri = Uri.parse(URL);
+                videoView.setVideoURI(uri);
+                videoView.requestFocus();
+                videoView.seekTo(1);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(Humorous_Video_1.this, "Please check your internet connection", Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
 }

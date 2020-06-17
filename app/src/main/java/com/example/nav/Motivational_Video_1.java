@@ -1,10 +1,12 @@
 package com.example.nav;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.LinearLayoutCompat;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -21,18 +23,27 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.Toolbar;
 import android.widget.VideoView;
 
 import com.firebase.client.Firebase;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Motivational_Video_1 extends AppCompatActivity {
     VideoView videoView;
     ProgressDialog pd;
-    ImageView imgplay,fs,backmot1;
+    ImageView imgplay, fs, backmot1;
     ProgressBar pb;
-    TextView curr,tot;
-    int dur,current=0;
+    Intent intent;
+    TextView curr, tot, videoTitle;
+    int dur, current=0;
+    String Title, URL, VideoNumber;
+    DatabaseReference reff;
     boolean isPlaying = false;
 
     @Override
@@ -42,7 +53,9 @@ public class Motivational_Video_1 extends AppCompatActivity {
         Firebase.setAndroidContext(this);
         pd = new ProgressDialog(this);
         pd.setMessage("Loading...");
+        pd.show();
         backmot1 = findViewById(R.id.motback1);
+        videoTitle = findViewById(R.id.videotitle);
         videoView = findViewById(R.id.vView);
         pb = findViewById(R.id.motprogressBar1);
         pb.setMax(100);
@@ -51,18 +64,16 @@ public class Motivational_Video_1 extends AppCompatActivity {
         curr = findViewById(R.id.motcurrent1);
         tot = findViewById(R.id.mottotal1);
         imgplay = findViewById(R.id.playimg1);
+
+        intent = getIntent();
+        VideoNumber = intent.getStringExtra("videoNumber");
+        getVideo(VideoNumber);
         backmot1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-        final DisplayMetrics displayMetrics = new DisplayMetrics();
-        String str = "https://firebasestorage.googleapis.com/v0/b/flyapp-84c6a.appspot.com/o/Videos%2FMotivational1%2F(Marvel)%20Steve%20Rogers%20-%20A%20Man%20Out%20of%20Time%20-%20Captain%20America.mp4?alt=media&token=61b888af-b7c8-458d-8bc0-7b5b1d27cb6d";
-        Uri uri = Uri.parse(str);
-        videoView.setVideoURI(uri);
-        videoView.requestFocus();
-        videoView.seekTo(1);
 
         videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
@@ -71,6 +82,7 @@ public class Motivational_Video_1 extends AppCompatActivity {
                     dur = mp.getDuration() / 1000;
                     String duration1 = String.format("%02d:%02d", dur / 60, dur % 60);
                     tot.setText(duration1);
+                    pd.dismiss();
                 }catch(Exception e){
                     tot.setVisibility(View.INVISIBLE);
                 }
@@ -108,6 +120,7 @@ public class Motivational_Video_1 extends AppCompatActivity {
             }
 
         });
+        imgplay.performClick();
 
 
     }
@@ -157,5 +170,26 @@ public class Motivational_Video_1 extends AppCompatActivity {
     public void onBackPressed() {
         isPlaying = false;
         super.onBackPressed();
+    }
+    public void getVideo(final String videoNumber){
+        reff = FirebaseDatabase.getInstance().getReference().child("videos");
+        reff.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Title = dataSnapshot.child("Motivational"+videoNumber).child("Title").getValue().toString();
+                URL = dataSnapshot.child("Motivational"+videoNumber).child("URL").getValue().toString();
+                videoTitle.setText(Title);
+                Uri uri = Uri.parse(URL);
+                videoView.setVideoURI(uri);
+                videoView.requestFocus();
+                videoView.seekTo(1);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(Motivational_Video_1.this, "Please check your internet connection", Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
 }

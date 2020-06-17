@@ -10,9 +10,9 @@
         android:id="@+id/humback1"
         android:src="@drawable/ic_arrow_back_black_24dp"/>
     <TextView
+        android:id="@+id/videotitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="'Arabs' - Russell Peters - Red, White And Brown"
         android:textSize="20sp"
         android:layout_marginTop="20dp"
         android:textColor="#FFFFFF"/>
