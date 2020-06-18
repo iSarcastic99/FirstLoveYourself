@@ -17,11 +17,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ScrollView
         android:id="@+id/scrollView4"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contactback">
@@ -34,202 +34,179 @@
             android:background="@drawable/bgs">
 
             <TextView
-                android:id="@+id/ceo"
+                android:id="@+id/counselor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="130dp"
+                android:layout_marginStart="95dp"
                 android:layout_marginTop="25dp"
+                android:visibility="invisible"
                 android:text="Counsellors"
                 android:textSize="25sp" />
 
             <TextView
-                android:id="@+id/rahul"
+                android:id="@+id/cnslrname1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/ceo"
+                android:layout_below="@+id/counselor"
                 android:layout_marginStart="130dp"
-                android:layout_marginTop="15dp"
-                android:text="Rahul Singh Sengar" />
+                android:layout_marginTop="15dp"/>
 
             <TextView
-                android:id="@+id/ad1"
+                android:id="@+id/cnslrdesignation1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/rahul"
-                android:layout_marginStart="130dp"
-                android:text="App Developer" />
+                android:layout_below="@+id/cnslrname1"
+                android:layout_marginStart="130dp"/>
 
 
             <TextView
-                android:id="@+id/ad1email"
+                android:id="@+id/cnslrloc1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/ad1"
-                android:layout_marginStart="130dp"
-                android:text="Email: rahulsinghsengar009@gmail.com" />
+                android:layout_below="@id/cnslrdesignation1"
+                android:layout_marginStart="130dp"/>
 
 
             <TextView
-                android:id="@+id/hardik"
+                android:id="@+id/cnslrname2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/ad1email"
+                android:layout_below="@+id/cnslrloc1"
                 android:layout_marginStart="130dp"
-                android:layout_marginTop="45dp"
-                android:text="Hardik Sharma" />
+                android:layout_marginTop="45dp"/>
 
             <TextView
-                android:id="@+id/ad2"
+                android:id="@+id/cnslrdesignation2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/hardik"
-                android:layout_marginStart="130dp"
-                android:text="App Developer" />
+                android:layout_below="@+id/cnslrname2"
+                android:layout_marginStart="130dp"/>
 
             <TextView
-                android:id="@+id/ad2email"
+                android:id="@+id/cnslrloc2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/ad2"
-                android:layout_marginStart="130dp"
-                android:text="Email: 17hardik.sharma@gmail.com" />
+                android:layout_below="@+id/cnslrdesignation2"
+                android:layout_marginStart="130dp"/>
 
             <TextView
-                android:id="@+id/himanshu"
+                android:id="@+id/cnslrname3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/ad2email"
+                android:layout_below="@+id/cnslrloc2"
                 android:layout_marginStart="130dp"
-                android:layout_marginTop="50dp"
-                android:text="Himanshu Gangil" />
+                android:layout_marginTop="50dp"/>
 
             <TextView
-                android:id="@+id/wd1"
+                android:id="@+id/cnslrdesignation3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/himanshu"
-                android:layout_marginStart="130dp"
-                android:text="Web Developer" />
+                android:layout_below="@+id/cnslrname3"
+                android:layout_marginStart="130dp"/>
+            <TextView
+                android:id="@+id/cnslrloc3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cnslrdesignation3"
+                android:layout_marginStart="130dp"/>
 
             <TextView
-                android:id="@+id/wd1email"
+                android:id="@+id/cnslrname4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/wd1"
+                android:layout_below="@+id/cnslrloc3"
                 android:layout_marginStart="130dp"
-                android:text="Email: himanshugangil1999@gmail.com" />
+                android:layout_marginTop="50dp"/>
 
             <TextView
-                android:id="@+id/prashant"
+                android:id="@+id/cnslrdesignation4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/wd1email"
-                android:layout_marginStart="130dp"
-                android:layout_marginTop="50dp"
-                android:text="Prashant Sagar" />
+                android:layout_below="@+id/cnslrname4"
+                android:layout_marginStart="130dp"/>
+            <TextView
+                android:id="@+id/cnslrloc4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cnslrdesignation4"
+                android:layout_marginStart="130dp"/>
 
             <TextView
-                android:id="@+id/wd2"
+                android:id="@+id/cnslrname5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/prashant"
+                android:layout_below="@+id/cnslrloc4"
                 android:layout_marginStart="130dp"
-                android:text="Web Developer" />
-
+                android:layout_marginTop="50dp"/>
             <TextView
-                android:id="@+id/wd2email"
+                android:id="@+id/cnslrdesignation5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/wd2"
-                android:layout_marginStart="130dp"
-                android:text="Email: prashant.sagar73@gmail.com" />
-
+                android:layout_below="@+id/cnslrname5"
+                android:layout_marginStart="130dp"/>
             <TextView
-                android:id="@+id/shubhro"
+                android:id="@+id/cnslrloc5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/wd2email"
-                android:layout_marginStart="130dp"
-                android:layout_marginTop="50dp"
-                android:text="Shubhrojyoti Kabiraj" />
-
-            <TextView
-                android:id="@+id/wd3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/shubhro"
-                android:layout_marginStart="130dp"
-                android:text="Designer" />
-
-            <TextView
-                android:id="@+id/wd3email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/wd3"
-                android:layout_marginStart="130dp"
-                android:text="Email: shubhrojyotikabiraj@gmail.com" />
-
+                android:layout_below="@+id/cnslrdesignation5"
+                android:layout_marginStart="130dp"/>
 
             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/shubhro_image"
+                android:id="@+id/cnslrimage5"
                 android:layout_width="96dp"
                 android:layout_height="96dp"
-                android:layout_below="@+id/wd3"
-                android:layout_alignLeft="@+id/shubhro"
+                android:layout_below="@+id/cnslrdesignation5"
+                android:layout_alignLeft="@+id/cnslrname5"
                 android:layout_marginLeft="-116dp"
                 android:layout_marginTop="-56dp"
-                android:src="@drawable/shubhro"
                 app:civ_border_color="#e67e22"
                 app:civ_border_width="2dp" />
 
             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/hardik_image"
+                android:id="@+id/cnslrimage2"
                 android:layout_width="96dp"
                 android:layout_height="96dp"
-                android:layout_below="@+id/ad2"
-                android:layout_alignLeft="@+id/shubhro"
+                android:layout_below="@+id/cnslrdesignation2"
+                android:layout_alignLeft="@+id/cnslrloc5"
                 android:layout_marginLeft="-116dp"
                 android:layout_marginTop="-56dp"
-                android:src="@drawable/hardik"
                 app:civ_border_color="#e67e22"
                 app:civ_border_width="2dp" />
 
             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/prashant_image"
+                android:id="@+id/cnslrimage4"
                 android:layout_width="96dp"
                 android:layout_height="96dp"
-                android:layout_below="@+id/wd2"
-                android:layout_alignLeft="@+id/shubhro"
+                android:layout_below="@+id/cnslrdesignation4"
+                android:layout_alignLeft="@+id/cnslrloc5"
                 android:layout_marginLeft="-116dp"
                 android:layout_marginTop="-56dp"
-                android:src="@drawable/sagarbg"
                 app:civ_border_color="#e67e22"
                 app:civ_border_width="2dp" />
 
             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/rahul_image"
+                android:id="@+id/cnslrimage1"
                 android:layout_width="96dp"
                 android:layout_height="96dp"
-                android:layout_below="@+id/ad1"
-                android:layout_alignLeft="@+id/shubhro"
+                android:layout_below="@+id/cnslrdesignation1"
+                android:layout_alignLeft="@+id/cnslrloc5"
                 android:layout_marginLeft="-116dp"
                 android:layout_marginTop="-56dp"
-                android:src="@drawable/rahulbg"
                 app:civ_border_color="#e67e22"
                 app:civ_border_width="2dp" />
 
             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/gangil_image"
+                android:id="@+id/cnslrimage3"
                 android:layout_width="96dp"
                 android:layout_height="96dp"
-                android:layout_below="@+id/wd1"
-                android:layout_alignLeft="@+id/shubhro"
+                android:layout_below="@+id/cnslrdesignation3"
+                android:layout_alignLeft="@+id/cnslrloc5"
                 android:layout_marginLeft="-116dp"
                 android:layout_marginTop="-56dp"
-                android:src="@drawable/gangil"
                 app:civ_border_color="#e67e22"
-                app:civ_border_width="2dp" />
+                app:civ_border_width="2dp"/>
         </RelativeLayout>
 
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
