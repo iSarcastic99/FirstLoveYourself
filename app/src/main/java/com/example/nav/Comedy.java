@@ -142,7 +142,7 @@ public class Comedy extends Fragment {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Toast.makeText(getContext(), "Please check your internet connection", Toast.LENGTH_SHORT).show();
-
+                pd.dismiss();
             }
         });
 

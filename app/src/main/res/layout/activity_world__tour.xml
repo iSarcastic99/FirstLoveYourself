@@ -10,11 +10,13 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/inside"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Places In India"
             android:layout_marginTop="10dp"
             android:layout_marginStart="50dp"
+            android:visibility="invisible"
             android:textSize="30sp"/>
 
         <ImageView
@@ -29,79 +31,76 @@
             android:layout_width="350dp"
             android:layout_height="200dp"
             android:scaleType="fitXY"
-            android:id="@+id/chailimage"
+            android:id="@+id/placeimage1"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/chail" />
+            android:layout_marginTop="15dp"/>
         <TextView
+            android:id="@+id/placetv1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginStart="30dp"
-            android:textSize="20sp"
-            android:text="Chail, Himachal Pradesh"/>
+            android:textSize="20sp"/>
         <ImageView
             android:layout_width="350dp"
-            android:id="@+id/munnarimage"
+            android:id="@+id/placeimage2"
             android:layout_height="200dp"
             android:scaleType="fitXY"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/munnar" />
+            android:layout_marginTop="10dp"/>
         <TextView
+            android:id="@+id/placetv2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="5dp"
-            android:textSize="20sp"
-            android:text="Munnar, Kerela"/>
-        <ImageView
-            android:layout_width="350dp"
-            android:layout_height="200dp"
-            android:scaleType="fitXY"
-            android:id="@+id/piimage"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/pi" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="30dp"
-            android:textSize="20sp"
-            android:text="Pithoragarh, Uttrakhand"/>
+            android:textSize="20sp"/>
         <ImageView
             android:layout_width="350dp"
             android:layout_height="200dp"
             android:scaleType="fitXY"
-            android:id="@+id/dzukouimage"
+            android:id="@+id/placeimage3"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/dzukou" />
+            android:layout_marginTop="10dp"/>
         <TextView
+            android:id="@+id/placetv3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginStart="30dp"
-            android:textSize="20sp"
-            android:text="Dzukou Valley, Nagaland"/>
-        <ImageView
-            android:layout_width="350dp"
-            android:layout_height="200dp"
-            android:scaleType="fitXY"
-            android:id="@+id/valleyimage"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/valley_of_flowers" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="30dp"
-            android:textSize="20sp"
-            android:text="Valley Of Flowers, Uttarakhand"/>
+            android:textSize="20sp"/>
 
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:id="@+id/placeimage4"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"/>
         <TextView
+            android:id="@+id/placetv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:textSize="20sp"/>
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:id="@+id/placeimage5"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/placetv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/outside"
+            android:visibility="invisible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -113,80 +112,73 @@
             android:layout_width="350dp"
             android:layout_height="200dp"
             android:scaleType="fitXY"
-            android:id="@+id/greatimage"
+            android:id="@+id/placeimage6"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/great_barrier" />
+            android:layout_marginTop="20dp"/>
         <TextView
+            android:id="@+id/placetv6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginStart="30dp"
-            android:textSize="20sp"
-            android:text="Great Barrier Reef, Australia"/>
+            android:textSize="20sp"/>
         <ImageView
             android:layout_width="350dp"
             android:layout_height="200dp"
             android:scaleType="fitXY"
-            android:id="@+id/palawanimage"
+            android:id="@+id/placeimage7"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/palawan" />
+            android:layout_marginTop="10dp"/>
         <TextView
+            android:id="@+id/placetv7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginStart="30dp"
-            android:textSize="20sp"
-            android:text="Palawan Island, Philippines"/>
+            android:textSize="20sp"/>
         <ImageView
             android:layout_width="350dp"
             android:layout_height="200dp"
             android:scaleType="fitXY"
-            android:id="@+id/moraineimage"
+            android:id="@+id/placeimage8"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/moraine" />
+            android:layout_marginTop="10dp"/>
         <TextView
+            android:id="@+id/placetv8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginStart="30dp"
-            android:textSize="20sp"
-            android:text="Morain Lake, Canada"/>
+            android:textSize="20sp"/>
         <ImageView
             android:layout_width="350dp"
             android:layout_height="200dp"
             android:scaleType="fitXY"
-            android:id="@+id/cliffsimage"
+            android:id="@+id/placeimage9"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/cliffs_of_moher" />
+            android:layout_marginTop="10dp"/>
         <TextView
+            android:id="@+id/placetv9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginStart="25dp"
-            android:textSize="20sp"
-            android:text="Cliffs Of Moher, Ireland"/>
+            android:textSize="20sp"/>
         <ImageView
             android:layout_width="350dp"
             android:layout_height="200dp"
             android:scaleType="fitXY"
             android:layout_marginStart="10dp"
-            android:id="@+id/iguazuimage"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/iguazu" />
+            android:id="@+id/placeimage10"
+            android:layout_marginTop="10dp"/>
         <TextView
+            android:id="@+id/placetv10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="10dp"
             android:layout_marginStart="30dp"
-            android:textSize="20sp"
-            android:text="Iguazu Falls, Argentina/Brazil Border"/>
-
-
+            android:textSize="20sp"/>
 
     </LinearLayout>
 

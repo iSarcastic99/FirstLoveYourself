@@ -113,8 +113,6 @@ public class Inspiration extends Fragment {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                     .permitAll().build();
             StrictMode.setThreadPolicy(policy);
-            //your codes here
-
         }
         reff = FirebaseDatabase.getInstance().getReference().child("videos");
         reff.addValueEventListener(new ValueEventListener() {
@@ -146,7 +144,7 @@ public class Inspiration extends Fragment {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Toast.makeText(getContext(), "Please check your internet connection", Toast.LENGTH_SHORT).show();
-
+                pd.dismiss();
             }
         });
 

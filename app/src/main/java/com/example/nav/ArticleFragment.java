@@ -92,7 +92,7 @@ public class ArticleFragment extends AppCompatActivity {
         myList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent1 = new Intent(ArticleFragment.this,Article1.class);
+                Intent intent1 = new Intent(ArticleFragment.this, Article1.class);
                 String pos = Integer.toString(position+1);
                 intent1.putExtra("articleNumber", pos);
                 startActivity(intent1);

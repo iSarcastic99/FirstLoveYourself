@@ -20,16 +20,7 @@
         <activity android:name=".Humorous_Video_1" />
         <activity android:name=".Motivational_Video_1" />
         <activity android:name=".Login" />
-        <activity android:name=".Pithoragarh" />
-        <activity android:name=".Munnar" />
-        <activity android:name=".Valley_Of_Flowers" />
-        <activity android:name=".Dzukou" />
-        <activity android:name=".Chail" />
-        <activity android:name=".Cliffs_Of_Moher" />
-        <activity android:name=".Great_Barrier" />
-        <activity android:name=".Morain" />
-        <activity android:name=".Iguazu" />
-        <activity android:name=".Palawan" />
+        <activity android:name=".Places" />
         <activity android:name=".World_Tour" />
         <activity android:name=".ContactUs" />
         <activity android:name=".Feedback" />
