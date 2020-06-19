@@ -1,49 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:background="#dddddd"
-    android:layout_height="match_parent"
-    tools:context=".Events">
-
-    <ImageView
-        android:layout_width="wrap_content"
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:id="@+id/eventback"
-        android:layout_marginTop="5dp"
-        android:src="@drawable/ic_keyboard_backspace_black_24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="288dp"
-        android:text="Patience is bitter, but its fruit is sweet"
-        android:textSize="23sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="50dp"
+            android:textSize="30sp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="264dp"
-        android:layout_marginTop="340dp"
-        android:text="-Aristotle"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/backbutton"
+            android:visibility="invisible"
+            android:src="@drawable/ic_keyboard_backspace_black_24dp"
+            android:layout_marginStart="-340dp"
+            android:layout_marginTop="-30dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="556dp"
-        android:text="Coming Soon..."
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:id="@+id/eventimage1"
+            android:visibility="gone"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"/>
+        <TextView
+            android:id="@+id/eventtv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:textSize="20sp"/>
+        <ImageView
+            android:layout_width="350dp"
+            android:id="@+id/eventimage2"
+            android:layout_height="200dp"
+            android:visibility="gone"
+            android:scaleType="fitXY"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/eventtv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"/>
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:id="@+id/eventimage3"
+            android:visibility="gone"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/eventtv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:id="@+id/eventimage4"
+            android:visibility="gone"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/eventtv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:textSize="20sp"/>
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:id="@+id/eventimage5"
+            android:visibility="gone"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/eventtv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+</ScrollView>

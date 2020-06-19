@@ -12,12 +12,14 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CounselorDetails"></activity>
+        <activity android:name=".Events"></activity>
+        <activity android:name=".EventCities" />
+        <activity android:name=".EventDetails" />
+        <activity android:name=".CounselorDetails" />
         <activity
             android:name=".videos"
             android:label="@string/title_activity_videos"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Events" />
         <activity android:name=".Counselor" />
         <activity android:name=".Humorous_Video_1" />
         <activity android:name=".Motivational_Video_1" />
