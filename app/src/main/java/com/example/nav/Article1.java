@@ -42,7 +42,6 @@ public class Article1 extends AppCompatActivity {
         BodyTV = findViewById(R.id.body);
         OuterLayout = findViewById(R.id.outerLayout);
         InnerLayout = findViewById(R.id.innerLayout);
-
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

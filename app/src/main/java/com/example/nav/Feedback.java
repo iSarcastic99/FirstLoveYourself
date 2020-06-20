@@ -1,8 +1,6 @@
 package com.example.nav;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -11,14 +9,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 import com.firebase.client.Firebase;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class Feedback extends AppCompatActivity {
-    EditText etName, etEmail, etSubject, etFeedback;
+    EditText etSubject, etFeedback;
     Button   b_submit;
     String   sub, Feedback, Username, S;
     ImageView backfeedback;

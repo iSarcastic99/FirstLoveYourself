@@ -1,193 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout
+    android:id="@+id/outerLayout"
+    android:layout_width="match_parent"
+    android:background="@drawable/bgf"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/backbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:src="@drawable/ic_keyboard_backspace_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintVertical_bias="0.03"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/changeloc"
+        android:visibility="invisible"
+        android:src="@drawable/change_location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintVertical_bias="0.03"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03"/>
+
+    <ScrollView
+        android:id="@+id/scrollView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintVertical_bias="0.25"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="100dip">
 
-        <TextView
-            android:id="@+id/title"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center_horizontal"
-            android:layout_marginStart="50dp"
-            android:textSize="30sp"/>
+            android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/backbutton"
-            android:visibility="invisible"
-            android:src="@drawable/ic_keyboard_backspace_black_24dp"
-            android:layout_marginStart="-340dp"
-            android:layout_marginTop="-30dp"/>
+            <ImageView
+                android:id="@+id/eventimage1"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
 
-        <ImageView
-            android:layout_width="350dp"
-            android:layout_height="200dp"
-            android:scaleType="fitXY"
-            android:id="@+id/eventimage1"
-            android:visibility="gone"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="15dp"/>
-        <TextView
-            android:id="@+id/eventtv1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="30dp"
-            android:textSize="20sp"/>
-        <TextView
-            android:id="@+id/datetv1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="30dp"
-            android:textSize="20sp"/>
-        <TextView
-            android:id="@+id/timetv1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="30dp"
-            android:textSize="20sp"/>
-        <ImageView
-            android:layout_width="350dp"
-            android:id="@+id/eventimage2"
-            android:layout_height="200dp"
-            android:visibility="gone"
-            android:scaleType="fitXY"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"/>
-        <TextView
-            android:id="@+id/eventtv2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:visibility="gone"
-            android:layout_marginTop="5dp"
-            android:textSize="20sp"/>
-        <TextView
-            android:id="@+id/datetv2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="30dp"
-            android:textSize="20sp"/>
-        <TextView
-            android:id="@+id/timetv2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="30dp"
-            android:textSize="20sp"/>
-        <ImageView
-            android:layout_width="350dp"
-            android:layout_height="200dp"
-            android:scaleType="fitXY"
-            android:id="@+id/eventimage3"
-            android:visibility="gone"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"/>
-        <TextView
-            android:id="@+id/eventtv3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="30dp"
-            android:textSize="20sp"/>
-        <TextView
-            android:id="@+id/datetv3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="30dp"
-            android:textSize="20sp"/>
-        <TextView
-            android:id="@+id/timetv3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="30dp"
-            android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/eventtv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:visibility="gone" />
 
-        <ImageView
-            android:layout_width="350dp"
-            android:layout_height="200dp"
-            android:scaleType="fitXY"
-            android:id="@+id/eventimage4"
-            android:visibility="gone"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"/>
-        <TextView
-            android:id="@+id/eventtv4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="30dp"
-            android:textSize="20sp"/>
-        <TextView
-            android:id="@+id/datetv4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="30dp"
-            android:textSize="20sp"/>
-        <TextView
-            android:id="@+id/timetv4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="30dp"
-            android:textSize="20sp"/>
-        <ImageView
-            android:layout_width="350dp"
-            android:layout_height="200dp"
-            android:scaleType="fitXY"
-            android:id="@+id/eventimage5"
-            android:visibility="gone"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"/>
-        <TextView
-            android:id="@+id/eventtv5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="30dp"
-            android:textSize="20sp"/>
-        <TextView
-            android:id="@+id/datetv5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="30dp"
-            android:textSize="20sp"/>
-        <TextView
-            android:id="@+id/timetv5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="30dp"
-            android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/datetv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:visibility="gone" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/timetv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:visibility="gone" />
 
-</ScrollView>
+            <ImageView
+                android:id="@+id/eventimage2"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/eventtv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/datetv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/timetv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/eventimage3"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/eventtv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/datetv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/timetv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/eventimage4"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/eventtv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/datetv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/timetv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/eventimage5"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/eventtv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/datetv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/timetv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

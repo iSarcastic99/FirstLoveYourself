@@ -16,16 +16,17 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/hel" />
+        app:srcCompat="@drawable/hel"/>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="225dp"
         android:layout_height="53dp"
         android:layout_marginTop="8dp"
-        android:text="Cuaz It Matters..."
+        android:text="@string/cuaz_it_matters"
         android:textColor="#E67E22"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
