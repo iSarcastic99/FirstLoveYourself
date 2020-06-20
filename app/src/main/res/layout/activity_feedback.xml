@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -7,50 +7,54 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView
+        android:id="@+id/feedbackback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-
-        android:id="@+id/feedbackback"
-        android:src="@drawable/ic_keyboard_backspace_black_24dp"/>
-
-    <EditText
-        android:id="@+id/name2"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="102dp"
-        android:hint="Enter Your Name" />
-
-    <EditText
-        android:id="@+id/email2"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="25dp"
-        android:hint="Enter Your Email" />
+        android:src="@drawable/ic_keyboard_backspace_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01"
+        app:layout_constraintHorizontal_bias="0.01"/>
 
     <EditText
         android:id="@+id/subject"
-        android:layout_width="300dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="5dip"
+        android:layout_marginEnd="5dip"
         android:layout_height="wrap_content"
-        android:hint="Enter Your Subject" />
+        android:layout_width="match_parent"
+        android:hint="Enter Your Subject"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.46"/>
 
     <EditText
         android:id="@+id/feedback"
-        android:layout_width="300dp"
+        android:layout_marginStart="5dip"
+        android:layout_marginEnd="5dip"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="25dp"
-        android:hint="Give Your Feedback" />
+        android:layout_width="match_parent"
+        android:hint="Give Your Feedback"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.55"/>
 
     <Button
         android:id="@+id/submit"
-        android:layout_width="300dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="5dip"
+        android:layout_marginEnd="5dip"
         android:layout_height="wrap_content"
-        android:layout_marginTop="73dp"
-        android:text="SEND FEEDBACK" />
-</LinearLayout>
+        android:layout_width="match_parent"
+        android:text="SEND FEEDBACK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
