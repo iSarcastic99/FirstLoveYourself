@@ -55,13 +55,13 @@ public class EventCities extends AppCompatActivity {
         reff.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                CityButton1.setText(dataSnapshot.child("City1").child("Name").getValue().toString());
-                CityButton2.setText(dataSnapshot.child("City2").child("Name").getValue().toString());
-                CityButton3.setText(dataSnapshot.child("City3").child("Name").getValue().toString());
-                CityButton4.setText(dataSnapshot.child("City4").child("Name").getValue().toString());
-                CityButton5.setText(dataSnapshot.child("City5").child("Name").getValue().toString());
-                CityButton6.setText(dataSnapshot.child("City6").child("Name").getValue().toString());
-                CityButton7.setText(dataSnapshot.child("City7").child("Name").getValue().toString());
+                CityButton1.setText(dataSnapshot.child("Bangaluru").child("Name").getValue().toString());
+                CityButton2.setText(dataSnapshot.child("Chennai").child("Name").getValue().toString());
+                CityButton3.setText(dataSnapshot.child("Gwalior").child("Name").getValue().toString());
+                CityButton4.setText(dataSnapshot.child("Hyderabad").child("Name").getValue().toString());
+                CityButton5.setText(dataSnapshot.child("Kolkata").child("Name").getValue().toString());
+                CityButton6.setText(dataSnapshot.child("Mumbai").child("Name").getValue().toString());
+                CityButton7.setText(dataSnapshot.child("New Delhi").child("Name").getValue().toString());
                 OtherButton.setText("Other");
                 pd.dismiss();
                 TitleTV.setVisibility(View.VISIBLE);
@@ -69,8 +69,8 @@ public class EventCities extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         firebase.child(Username).child("City").setValue(CityButton1.getText().toString());
+                        saveData(CityButton1.getText().toString());
                         Intent intent = new Intent(EventCities.this, Events.class);
-                        intent.putExtra("cityNumber", "1");
                         startActivity(intent);
                         finish();
                     }
@@ -80,8 +80,8 @@ public class EventCities extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         firebase.child(Username).child("City").setValue(CityButton2.getText().toString());
+                        saveData(CityButton2.getText().toString());
                         Intent intent = new Intent(EventCities.this, Events.class);
-                        intent.putExtra("cityNumber", "2");
                         startActivity(intent);
                         finish();
                     }
@@ -91,8 +91,8 @@ public class EventCities extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         firebase.child(Username).child("City").setValue(CityButton3.getText().toString());
+                        saveData(CityButton3.getText().toString());
                         Intent intent = new Intent(EventCities.this, Events.class);
-                        intent.putExtra("cityNumber", "3");
                         startActivity(intent);
                         finish();
                     }
@@ -102,8 +102,8 @@ public class EventCities extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         firebase.child(Username).child("City").setValue(CityButton4.getText().toString());
+                        saveData(CityButton4.getText().toString());
                         Intent intent = new Intent(EventCities.this, Events.class);
-                        intent.putExtra("cityNumber", "4");
                         startActivity(intent);
                         finish();
                     }
@@ -113,8 +113,8 @@ public class EventCities extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         firebase.child(Username).child("City").setValue(CityButton5.getText().toString());
+                        saveData(CityButton5.getText().toString());
                         Intent intent = new Intent(EventCities.this, Events.class);
-                        intent.putExtra("cityNumber", "5");
                         startActivity(intent);
                         finish();
                     }
@@ -124,8 +124,8 @@ public class EventCities extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         firebase.child(Username).child("City").setValue(CityButton6.getText().toString());
+                        saveData(CityButton6.getText().toString());
                         Intent intent = new Intent(EventCities.this, Events.class);
-                        intent.putExtra("cityNumber", "6");
                         startActivity(intent);
                         finish();
                     }
@@ -135,8 +135,8 @@ public class EventCities extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         firebase.child(Username).child("City").setValue(CityButton7.getText().toString());
+                        saveData(CityButton7.getText().toString());
                         Intent intent = new Intent(EventCities.this, Events.class);
-                        intent.putExtra("cityNumber", "7");
                         startActivity(intent);
                         finish();
                     }
@@ -158,5 +158,10 @@ public class EventCities extends AppCompatActivity {
                 finish();
             }
         });
+    }
+    public void saveData(String cityName){
+        SharedPreferences.Editor editor = getSharedPreferences(S,i).edit();
+        editor.putString("City", cityName);
+        editor.apply();
     }
 }

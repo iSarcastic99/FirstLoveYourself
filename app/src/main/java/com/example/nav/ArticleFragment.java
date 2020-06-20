@@ -39,7 +39,6 @@ public class ArticleFragment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_articles);
-
         mySearchView =  findViewById(R.id.searchView);
         myList =  findViewById(R.id.myList);
         backarticle = findViewById(R.id.articleback);

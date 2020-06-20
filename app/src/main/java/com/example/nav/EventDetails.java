@@ -10,6 +10,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -65,9 +66,12 @@ public class EventDetails extends AppCompatActivity {
                 Details = dataSnapshot.child("Details").getValue().toString();
                 VisitURL = dataSnapshot.child("URL").getValue().toString();
                 ImageURL = dataSnapshot.child("ImageURL").getValue().toString();
+                Title    = dataSnapshot.child("Title").getValue().toString();
+                TitleTV.setVisibility(View.VISIBLE);
                 TitleTV.setText(Title);
                 DetailsTV.setText(Details);
                 eventimage.setImageBitmap(getImageBitmap(ImageURL));
+                DetailsTV.setMovementMethod(new ScrollingMovementMethod());
                 detailButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -85,7 +89,6 @@ public class EventDetails extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(EventDetails.this, "Please check your internet connection", Toast.LENGTH_SHORT).show();
                 pd.dismiss();
             }
         });

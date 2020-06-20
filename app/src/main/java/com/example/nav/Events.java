@@ -32,20 +32,24 @@ public class Events extends AppCompatActivity {
     DatabaseReference reff;
     String city = "";
     TextView TitleTV, EventTV1, EventTV2, EventTV3, EventTV4, EventTV5;
+    TextView DateTV1, DateTV2, DateTV3, DateTV4, DateTV5;
+    TextView TimeTV1, TimeTV2, TimeTV3, TimeTV4, TimeTV5;
     ImageView EventImage1, EventImage2, EventImage3, EventImage4, EventImage5;
-    String Username, title1, title2, title3, title4, title5, desc1, desc2, desc3, desc4, desc5;
-    String cityNumber, S, imageURL1, imageURL2, imageURL3, imageURL4, imageURL5, URL1, URL2, URL3, URL4, URL5;
+    String Username, title1, title2, title3, title4, title5, desc1, desc2, desc3, desc4, desc5, CityName;
+    String S, M, imageURL1, imageURL2, imageURL3, imageURL4, imageURL5, URL1, URL2, URL3, URL4, URL5;
     String Date1, Date2, Date3, Date4, Date5;
     String Time1, Time2, Time3, Time4, Time5;
     ProgressDialog pd;
     ImageView backButton;
-    int i;
+    int i, j;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         SharedPreferences preferences = getSharedPreferences(S,i);
         Username = preferences.getString("Username","");
+        SharedPreferences preferences1 = getSharedPreferences(M,j);
+        CityName = preferences1.getString("City","");
         setContentView(R.layout.activity_events);
         TitleTV = findViewById(R.id.title);
         EventTV1 = findViewById(R.id.eventtv1);
@@ -53,6 +57,16 @@ public class Events extends AppCompatActivity {
         EventTV3 = findViewById(R.id.eventtv3);
         EventTV4 = findViewById(R.id.eventtv4);
         EventTV5 = findViewById(R.id.eventtv5);
+        DateTV1 = findViewById(R.id.datetv1);
+        DateTV2 = findViewById(R.id.datetv2);
+        DateTV3 = findViewById(R.id.datetv3);
+        DateTV4 = findViewById(R.id.datetv4);
+        DateTV5 = findViewById(R.id.datetv5);
+        TimeTV1 = findViewById(R.id.timetv1);
+        TimeTV2 = findViewById(R.id.timetv2);
+        TimeTV3 = findViewById(R.id.timetv3);
+        TimeTV4 = findViewById(R.id.timetv4);
+        TimeTV5 = findViewById(R.id.timetv5);
         EventImage1 = findViewById(R.id.eventimage1);
         EventImage2 = findViewById(R.id.eventimage2);
         EventImage3 = findViewById(R.id.eventimage3);
@@ -77,7 +91,6 @@ public class Events extends AppCompatActivity {
 
                     try{
                     city = dataSnapshot.child("users").child(Username).child("City").getValue().toString();
-                    if (!city.equals("")) {
                         try {
                             title1 = dataSnapshot.child("events").child(city).child("Event1").child("Title").getValue().toString();
                             desc1 = dataSnapshot.child("events").child(city).child("Event1").child("Details").getValue().toString();
@@ -88,11 +101,14 @@ public class Events extends AppCompatActivity {
                             backButton.setVisibility(View.VISIBLE);
                             EventTV1.setVisibility(View.VISIBLE);
                             EventImage1.setVisibility(View.VISIBLE);
-                            EventImage1.setImageBitmap(getImageBitmap(imageURL1));
+                            TimeTV1.setVisibility(View.VISIBLE);
+                            DateTV1.setVisibility(View.VISIBLE);
+                            TimeTV1.setText(Time1);
+                            DateTV1.setText(Date1);
                             EventTV1.setText(title1);
+                            EventImage1.setImageBitmap(getImageBitmap(imageURL1));
                         } catch(Exception e) {
                             pd.dismiss();
-                            Toast.makeText(Events.this, "No nearby events right now" + cityNumber, Toast.LENGTH_SHORT).show();
                             finish();
                         }
 
@@ -105,9 +121,12 @@ public class Events extends AppCompatActivity {
                             Date2 = dataSnapshot.child("events").child(city).child("Event2").child("Date").getValue().toString();
                             EventTV2.setVisibility(View.VISIBLE);
                             EventImage2.setVisibility(View.VISIBLE);
-                            EventImage2.setImageBitmap(getImageBitmap(imageURL2));
+                            TimeTV2.setVisibility(View.VISIBLE);
+                            DateTV2.setVisibility(View.VISIBLE);
+                            TimeTV2.setText(Time2);
+                            DateTV2.setText(Date2);
                             EventTV2.setText(title2);
-
+                            EventImage2.setImageBitmap(getImageBitmap(imageURL2));
                         } catch (Exception e) {
 
                         }
@@ -120,8 +139,12 @@ public class Events extends AppCompatActivity {
                             Date3 = dataSnapshot.child("events").child(city).child("Event3").child("Date").getValue().toString();
                             EventTV3.setVisibility(View.VISIBLE);
                             EventImage3.setVisibility(View.VISIBLE);
-                            EventImage3.setImageBitmap(getImageBitmap(imageURL3));
+                            TimeTV3.setVisibility(View.VISIBLE);
+                            DateTV3.setVisibility(View.VISIBLE);
+                            TimeTV3.setText(Time3);
+                            DateTV3.setText(Date3);
                             EventTV3.setText(title3);
+                            EventImage3.setImageBitmap(getImageBitmap(imageURL3));
 
                         } catch (Exception e) {
 
@@ -135,9 +158,12 @@ public class Events extends AppCompatActivity {
                             Date4 = dataSnapshot.child("events").child(city).child("Event4").child("Date").getValue().toString();
                             EventTV4.setVisibility(View.VISIBLE);
                             EventImage4.setVisibility(View.VISIBLE);
-                            EventImage4.setImageBitmap(getImageBitmap(imageURL4));
+                            TimeTV4.setVisibility(View.VISIBLE);
+                            DateTV4.setVisibility(View.VISIBLE);
+                            TimeTV4.setText(Time4);
+                            DateTV4.setText(Date4);
                             EventTV4.setText(title4);
-
+                            EventImage4.setImageBitmap(getImageBitmap(imageURL4));
                         } catch (Exception e) {
 
                         }
@@ -148,26 +174,29 @@ public class Events extends AppCompatActivity {
                             URL5 = dataSnapshot.child("events").child(city).child("Event5").child("URL").getValue().toString();
                             Time5 = dataSnapshot.child("events").child(city).child("Event5").child("Time").getValue().toString();
                             Date5 = dataSnapshot.child("events").child(city).child("Event5").child("Date").getValue().toString();
-
                             EventTV5.setVisibility(View.VISIBLE);
                             EventImage5.setVisibility(View.VISIBLE);
+                            TimeTV5.setVisibility(View.VISIBLE);
+                            DateTV5.setVisibility(View.VISIBLE);
+                            TimeTV5.setText(Time5);
+                            DateTV5.setText(Date5);
+                            EventTV5.setText(title5);
                             EventImage5.setImageBitmap(getImageBitmap(imageURL5));
                             EventTV5.setText(title5);
-
                         } catch (Exception e) {
 
                         }
                          TitleTV.setText(city);
                          pd.dismiss();
-                    } else{
-                        Intent intent = new Intent(Events.this, EventCities.class);
-                        startActivity(intent);
-                        pd.dismiss();
-                        finish();
-                    }
 
                      } catch(Exception e){
-
+                        if(CityName.equals("")) {
+                            Intent intent = new Intent(Events.this, EventCities.class);
+                            startActivity(intent);
+                            pd.dismiss();
+                        } else {
+                            finish();
+                        }
                     }
             }
 

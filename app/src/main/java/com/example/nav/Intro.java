@@ -13,7 +13,8 @@ int time = 2000, i;
 String S, name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState); SharedPreferences preferences = getSharedPreferences(S,i);
+        super.onCreate(savedInstanceState);
+        SharedPreferences preferences = getSharedPreferences(S,i);
         name = preferences.getString("Username","No name");
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_intro);
