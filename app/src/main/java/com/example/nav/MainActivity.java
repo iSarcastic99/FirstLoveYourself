@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Article = findViewById(R.id.nav_articles);
         LayoutInflater inflater = getLayoutInflater();
         Toolbar toolbar = findViewById(R.id.toolbar);
-        logout = findViewById(R.id.logout);
         setSupportActionBar(toolbar);
         drawer = findViewById(R.id.draw_layout);
         Firebase.setAndroidContext(this);
@@ -66,12 +65,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         uemail = navigationView.getHeaderView(0).findViewById(R.id.email_of_user);
         uname.setText(name);
         navigationView.setNavigationItemSelectedListener(this);
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               finish();
-            }
-        });
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawer,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
