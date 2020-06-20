@@ -32,9 +32,8 @@
             android:id="@+id/vView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="30dp"
-            app:layout_constraintBottom_toBottomOf="@id/videotitle"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="25dp"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/videotitle" />
 
     <ProgressBar
@@ -42,7 +41,7 @@
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="310dp"
+        android:layout_marginTop="270dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/videotitle" />
 
@@ -62,31 +61,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="330dp"
+        android:layout_marginTop="10dp"
         android:text="0:00"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="@id/playimg1"
-        app:layout_constraintTop_toBottomOf="@id/videotitle" />
+        app:layout_constraintTop_toBottomOf="@id/humprogressBar1" />
 
     <TextView
         android:id="@+id/humtotal1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="550dp"
-        android:layout_marginTop="330dp"
+        android:layout_marginTop="10dp"
         android:text="0:00"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="@id/humcurrent1"
-        app:layout_constraintTop_toBottomOf="@id/videotitle" />
+        app:layout_constraintTop_toBottomOf="@id/humprogressBar1" />
 
     <ImageView
         android:id="@+id/playimg1"
         android:layout_width="40sp"
         android:layout_height="40sp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="330dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/ic_play_arrow_black_24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/humback1" />
+        app:layout_constraintTop_toBottomOf="@id/humprogressBar1"
+        app:layout_constraintLeft_toLeftOf="@id/humcurrent1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
