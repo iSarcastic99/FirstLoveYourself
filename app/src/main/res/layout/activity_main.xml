@@ -5,169 +5,105 @@
     android:id="@+id/draw_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     android:background="@drawable/ic_bg"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity"
     tools:openDrawer="start">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="0dp">
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-<<<<<<< HEAD
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="DISCOVER Yourself with FLY!!!"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="349dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="125dp"
+            android:layout_marginBottom="60dp"
+            android:text="We, Welcome You !!!"
+            android:textColor="#E67E22"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.367"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="7dp"
+            android:text=">>SWIPE LEFT"
             android:textColor="#FFFFFF"
-            android:textSize="50sp"
-            app:fontFamily="sans-serif-condensed-light" />
-=======
-            android:layout_height="0dp">
->>>>>>> a5765ad86445488e856a4996412e221a1456308b
+            android:textSize="18sp" />
 
-            <TextView
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv2">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="DISCOVER!"
-                android:textColor="#FFFFFF"
-                android:textSize="50sp"
-                app:fontFamily="sans-serif-condensed-light" />
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical">
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="@string/mypara"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
 
-        <LinearLayout
-<<<<<<< HEAD
-            android:gravity="center_horizontal"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:orientation="vertical"
+        </ScrollView>
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="300dp"
+            android:text="Logout" />
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageButton
-                android:layout_marginTop="10dp"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="#00FFFFFF"
-                android:scaleType="fitStart"
-                android:src="@drawable/ic_video_img" />
 
-            <ImageButton
-                android:layout_marginTop="10dp"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="#00FFFFFF"
-                android:scaleType="fitStart"
-                android:src="@drawable/ic_chat_img" />
+        </FrameLayout>
 
-            <ImageButton
-                android:layout_marginTop="10dp"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="#00FFFFFF"
-                android:scaleType="fitStart"
-                android:src="@drawable/ic_counsellor_img"
-                android:onClick="doSomething"/>
-=======
->>>>>>> a5765ad86445488e856a4996412e221a1456308b
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="200dp"
+            android:text="Welcome" />
 
-            android:layout_weight="1.7"
-            android:background="@drawable/bg_menu"
-            android:orientation="horizontal"
-            android:layout_marginRight="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="0dp"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="0dp">
-
-            <LinearLayout
-                android:gravity="center_horizontal"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:orientation="vertical"
-                android:layout_height="match_parent">
-
-                <ImageButton
-                    android:id="@+id/videoButton"
-                    android:layout_marginTop="10dp"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:background="#00FFFFFF"
-                    android:scaleType="fitStart"
-                    android:src="@drawable/ic_video_img" />
-
-                <ImageButton
-                    android:layout_marginTop="10dp"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:background="#00FFFFFF"
-                    android:scaleType="fitStart"
-                    android:src="@drawable/ic_chat_img" />
-
-                <ImageButton
-                    android:layout_marginTop="10dp"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:background="#00FFFFFF"
-                    android:scaleType="fitStart"
-                    android:src="@drawable/ic_counsellor_img" />
-
-            </LinearLayout>
-            <LinearLayout
-                android:gravity="center_horizontal"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:orientation="vertical"
-                android:layout_height="match_parent">
-
-                <ImageButton
-                    android:layout_marginTop="10dp"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:background="#00FFFFFF"
-                    android:scaleType="fitStart"
-                    android:src="@drawable/ic_articles_img" />
-
-                <ImageButton
-                    android:layout_marginTop="10dp"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:background="#00FFFFFF"
-                    android:scaleType="fitStart"
-                    android:src="@drawable/ic_events_img" />
-
-                <ImageButton
-                    android:layout_marginTop="10dp"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:background="#00FFFFFF"
-                    android:scaleType="fitStart"
-                    android:src="@drawable/ic_worldtour_img" />
-
-            </LinearLayout>
-
-        </LinearLayout>
+            android:layout_height="?attr/actionBarSize"
+            android:background="#E39460"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     </LinearLayout>
-<<<<<<< HEAD
-    </LinearLayout>
-        android:text="Logout" />
-=======
->>>>>>> a5765ad86445488e856a4996412e221a1456308b
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-
-
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
