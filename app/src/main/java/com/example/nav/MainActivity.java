@@ -14,7 +14,6 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
@@ -29,7 +28,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     DatabaseReference reff;
     String email, S, name;
     int i;
-    ImageButton VideoButton;
     TextView uemail;
 
     @Override
@@ -39,7 +37,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         name = preferences.getString("Username","No name");
         setContentView(R.layout.activity_main);
         Article = findViewById(R.id.nav_articles);
-        VideoButton = findViewById(R.id.videoButton);
         LayoutInflater inflater = getLayoutInflater();
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -47,12 +44,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Firebase.setAndroidContext(this);
         FirebaseApp.initializeApp(this);
 
-        VideoButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
         reff = FirebaseDatabase.getInstance().getReference().child("users").child(name);
         reff.addValueEventListener(new ValueEventListener() {
             @Override
