@@ -2,11 +2,9 @@ package com.example.nav;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -22,7 +20,6 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class ArticleFragment extends AppCompatActivity {
-   // SearchView mySearchView;
     ListView myList;
     ArrayList<String> al = new ArrayList<>();
     ArrayList<String> arrlist;
