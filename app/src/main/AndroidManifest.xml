@@ -12,35 +12,35 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Events"></activity>
-        <activity android:name=".EventCities" />
-        <activity android:name=".EventDetails" />
-        <activity android:name=".CounselorDetails" />
+        <activity android:screenOrientation="portrait" android:name=".Events"></activity>
+        <activity android:screenOrientation="portrait" android:name=".EventCities" />
+        <activity android:screenOrientation="portrait" android:name=".EventDetails" />
+        <activity android:screenOrientation="portrait" android:name=".CounselorDetails" />
         <activity
             android:name=".videos"
             android:label="@string/title_activity_videos"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Counselor" />
-        <activity android:name=".Humorous_Video_1" />
-        <activity android:name=".Motivational_Video_1" />
-        <activity android:name=".Login" />
-        <activity android:name=".Places" />
-        <activity android:name=".World_Tour" />
-        <activity android:name=".ContactUs" />
-        <activity android:name=".Feedback" />
-        <activity android:name=".Article1" />
-        <activity android:name=".Intro">
+        <activity android:screenOrientation="landscape" android:configChanges="orientation|keyboardHidden" android:name=".Humorous_Video_1"/>
+        <activity android:screenOrientation="landscape" android:configChanges="orientation|keyboardHidden" android:name=".Motivational_Video_1"/>
+        <activity android:screenOrientation="portrait" android:name=".Login" />
+        <activity android:screenOrientation="portrait" android:name=".Places" />
+        <activity android:screenOrientation="portrait" android:name=".World_Tour" />
+        <activity android:screenOrientation="portrait" android:name=".ContactUs" />
+        <activity android:screenOrientation="portrait" android:name=".Feedback" />
+        <activity android:screenOrientation="portrait" android:name=".Article1" />
+        <activity android:screenOrientation="portrait" android:name=".Intro">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Register" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".MessageFragment" />
-        <activity android:name=".ChatFragment" />
-        <activity android:name=".ArticleFragment" />
+        <activity android:screenOrientation="portrait" android:name=".Register" />
+        <activity android:screenOrientation="portrait" android:name=".MainActivity" />
+        <activity android:screenOrientation="portrait" android:name=".MessageFragment" />
+        <activity android:screenOrientation="portrait" android:name=".ChatFragment" />
+        <activity android:screenOrientation="portrait" android:name=".ArticleFragment" />
     </application>
 
 </manifest>
