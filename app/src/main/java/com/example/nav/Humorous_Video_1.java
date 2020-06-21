@@ -8,6 +8,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -60,10 +61,10 @@ public class Humorous_Video_1 extends AppCompatActivity {
         backhum1 = findViewById(R.id.humback1);
         videoTitle = findViewById(R.id.videotitle);
         videoView = findViewById(R.id.vView);
-        pb = findViewById(R.id.motprogressBar1);
+        pb = findViewById(R.id.humprogressBar1);
         pb.setMax(100);
         curr = findViewById(R.id.humcurrent1);
-        fs = findViewById(R.id.motfs1);
+        fs = findViewById(R.id.humfs1);
         curr = findViewById(R.id.humcurrent1);
         tot = findViewById(R.id.humtotal1);
         imgplay = findViewById(R.id.playimg1);
@@ -74,6 +75,7 @@ public class Humorous_Video_1 extends AppCompatActivity {
         backhum1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 finish();
             }
         });

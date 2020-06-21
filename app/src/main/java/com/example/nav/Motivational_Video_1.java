@@ -65,7 +65,6 @@ public class Motivational_Video_1 extends AppCompatActivity {
         pb.setMax(100);
         curr = findViewById(R.id.motcurrent1);
         fs = findViewById(R.id.motfs1);
-        curr = findViewById(R.id.motcurrent1);
         tot = findViewById(R.id.mottotal1);
         imgplay = findViewById(R.id.playimg1);
 
