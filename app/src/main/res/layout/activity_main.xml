@@ -11,37 +11,37 @@
     tools:openDrawer="start">
 
     <LinearLayout
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-        android:layout_marginBottom="0dp">
-    <LinearLayout
-        android:layout_weight="1"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
-
-        <TextView
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp">
+        <LinearLayout
+            android:layout_weight="1"
             android:layout_width="match_parent"
+<<<<<<< HEAD
             android:layout_height="match_parent"
             android:gravity="center_horizontal|center_vertical"
             android:text="DISCOVER Yourself with FLY!!!"
             android:textColor="#FFFFFF"
             android:textSize="50sp"
             app:fontFamily="sans-serif-condensed-light" />
+=======
+            android:layout_height="0dp">
+>>>>>>> a5765ad86445488e856a4996412e221a1456308b
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="DISCOVER!"
+                android:textColor="#FFFFFF"
+                android:textSize="50sp"
+                app:fontFamily="sans-serif-condensed-light" />
 
-    <LinearLayout
+        </LinearLayout>
 
-        android:layout_weight="1.7"
-        android:background="@drawable/bg_menu"
-        android:orientation="horizontal"
-        android:layout_marginRight="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="0dp"
-        android:layout_width="match_parent"
-        android:layout_height="0dp">
         <LinearLayout
+<<<<<<< HEAD
             android:gravity="center_horizontal"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -72,46 +72,92 @@
                 android:scaleType="fitStart"
                 android:src="@drawable/ic_counsellor_img"
                 android:onClick="doSomething"/>
+=======
+>>>>>>> a5765ad86445488e856a4996412e221a1456308b
+
+            android:layout_weight="1.7"
+            android:background="@drawable/bg_menu"
+            android:orientation="horizontal"
+            android:layout_marginRight="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/videoButton"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/ic_video_img" />
+
+                <ImageButton
+                    android:layout_marginTop="10dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/ic_chat_img" />
+
+                <ImageButton
+                    android:layout_marginTop="10dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/ic_counsellor_img" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:layout_marginTop="10dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/ic_articles_img" />
+
+                <ImageButton
+                    android:layout_marginTop="10dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/ic_events_img" />
+
+                <ImageButton
+                    android:layout_marginTop="10dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/ic_worldtour_img" />
+
+            </LinearLayout>
 
         </LinearLayout>
-        <LinearLayout
-            android:gravity="center_horizontal"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:orientation="vertical"
-            android:layout_height="match_parent">
-
-            <ImageButton
-                android:layout_marginTop="10dp"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="#00FFFFFF"
-                android:scaleType="fitStart"
-                android:src="@drawable/ic_articles_img" />
-
-            <ImageButton
-                android:layout_marginTop="10dp"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="#00FFFFFF"
-                android:scaleType="fitStart"
-                android:src="@drawable/ic_events_img" />
-
-            <ImageButton
-                android:layout_marginTop="10dp"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="#00FFFFFF"
-                android:scaleType="fitStart"
-                android:src="@drawable/ic_worldtour_img" />
-
-        </LinearLayout>
-
-
 
     </LinearLayout>
+<<<<<<< HEAD
     </LinearLayout>
         android:text="Logout" />
+=======
+>>>>>>> a5765ad86445488e856a4996412e221a1456308b
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"

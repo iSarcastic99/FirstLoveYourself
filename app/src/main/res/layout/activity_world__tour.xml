@@ -28,11 +28,12 @@
             android:layout_marginTop="-30dp"/>
 
         <ImageView
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="fitXY"
             android:id="@+id/placeimage1"
             android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginTop="15dp"/>
         <TextView
             android:id="@+id/placetv1"
@@ -42,10 +43,11 @@
             android:layout_marginStart="30dp"
             android:textSize="20sp"/>
         <ImageView
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:id="@+id/placeimage2"
             android:layout_height="200dp"
             android:scaleType="fitXY"
+            android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"/>
         <TextView
@@ -56,10 +58,11 @@
             android:layout_marginTop="5dp"
             android:textSize="20sp"/>
         <ImageView
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="fitXY"
             android:id="@+id/placeimage3"
+            android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"/>
         <TextView
@@ -71,10 +74,11 @@
             android:textSize="20sp"/>
 
         <ImageView
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="fitXY"
             android:id="@+id/placeimage4"
+            android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"/>
         <TextView
@@ -85,10 +89,11 @@
             android:layout_marginStart="30dp"
             android:textSize="20sp"/>
         <ImageView
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="fitXY"
             android:id="@+id/placeimage5"
+            android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"/>
         <TextView
@@ -109,10 +114,11 @@
             android:textSize="30sp"/>
 
         <ImageView
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="fitXY"
             android:id="@+id/placeimage6"
+            android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"/>
         <TextView
@@ -123,10 +129,11 @@
             android:layout_marginStart="30dp"
             android:textSize="20sp"/>
         <ImageView
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="fitXY"
             android:id="@+id/placeimage7"
+            android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"/>
         <TextView
@@ -137,10 +144,11 @@
             android:layout_marginStart="30dp"
             android:textSize="20sp"/>
         <ImageView
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="fitXY"
             android:id="@+id/placeimage8"
+            android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"/>
         <TextView
@@ -151,10 +159,11 @@
             android:layout_marginStart="30dp"
             android:textSize="20sp"/>
         <ImageView
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="fitXY"
             android:id="@+id/placeimage9"
+            android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"/>
         <TextView
@@ -165,9 +174,10 @@
             android:layout_marginStart="25dp"
             android:textSize="20sp"/>
         <ImageView
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="fitXY"
+            android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
             android:id="@+id/placeimage10"
             android:layout_marginTop="10dp"/>

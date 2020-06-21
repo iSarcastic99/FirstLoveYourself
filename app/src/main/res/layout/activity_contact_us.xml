@@ -1,232 +1,244 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:background="@drawable/bgs"
     android:orientation="vertical">
 
-<ImageView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/contactback"
-    android:layout_marginStart="10dp"
-    android:layout_marginTop="8dp"
-    android:src="@drawable/ic_keyboard_backspace_black_24dp"/>
-
-<ScrollView android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="5dp"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-       <RelativeLayout
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:background="@drawable/bgs"
-           android:layout_marginStart="@dimen/activity_horizontal_margin"
-           android:layout_gravity="center"
-           >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:id="@+id/ceo"
-                android:textSize="25sp"
-                android:layout_marginStart="130dp"
-                android:text="CEO" />
-
-       <TextView
+    <ImageView
+        android:id="@+id/contactback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:id="@+id/rahul"
-        android:layout_below="@+id/ceo"
-        android:layout_marginStart="130dp"
-        android:text="Rahul Singh Sengar" />
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintVertical_bias="0.03"
+        android:src="@drawable/ic_keyboard_backspace_black_24dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView6"
+        app:layout_constraintEnd_toStartOf="@+id/scrollView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteY="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:background="@drawable/bgs">
+
             <TextView
+                android:id="@+id/ceo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="25dp"
+                android:text="CEO"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/rahul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ceo"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="15dp"
+                android:text="Rahul Singh Sengar" />
+
+            <TextView
                 android:id="@+id/ad1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/rahul"
                 android:layout_marginStart="130dp"
                 android:text="App Developer" />
 
 
+            <TextView
+                android:id="@+id/ad1email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ad1"
+                android:layout_marginStart="130dp"
+                android:text="Email: rahulsinghsengar009@gmail.com" />
 
             <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ad1"
-        android:id="@+id/ad1email"
-        android:layout_marginStart="130dp"
-        android:text="Email: rahulsinghsengar009@gmail.com" />
+                android:id="@+id/team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ad1email"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="25dp"
+                android:text="TEAM"
+                android:textSize="25sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:textSize="25sp"
-        android:layout_below="@id/ad1email"
-        android:id="@+id/team"
-        android:layout_marginStart="130dp"
-        android:text="TEAM" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_below="@+id/team"
-        android:id="@+id/hardik"
-        android:layout_marginStart="130dp"
-        android:text="Hardik Sharma" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/hardik"
-        android:id="@+id/ad2"
-        android:layout_marginStart="130dp"
-        android:text="App Developer" />
+            <TextView
+                android:id="@+id/hardik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/team"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="25dp"
+                android:text="Hardik Sharma" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ad2"
-        android:id="@+id/ad2email"
-        android:layout_marginStart="130dp"
-        android:text="Email: 17hardik.sharma@gmail.com" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/ad2email"
-        android:id="@+id/himanshu"
-        android:layout_marginStart="130dp"
-        android:text="Himanshu Gangil" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/himanshu"
-        android:id="@+id/wd1"
-        android:layout_marginStart="130dp"
-        android:text="Web Developer" />
+            <TextView
+                android:id="@+id/ad2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hardik"
+                android:layout_marginStart="130dp"
+                android:text="App Developer" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/wd1"
-        android:id="@+id/wd1email"
-        android:layout_marginStart="130dp"
-        android:text="Email: himanshugangil1999@gmail.com" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/wd1email"
-        android:id="@+id/prashant"
-        android:layout_marginStart="130dp"
-        android:text="Prashant Sagar" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/prashant"
-        android:id="@+id/wd2"
-        android:layout_marginStart="130dp"
-        android:text="Web Developer" />
+            <TextView
+                android:id="@+id/ad2email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ad2"
+                android:layout_marginStart="130dp"
+                android:text="Email: 17hardik.sharma@gmail.com" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/wd2"
-        android:id="@+id/wd2email"
-        android:layout_marginStart="130dp"
-        android:text="Email: prashant.sagar73@gmail.com" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/wd2email"
-        android:id="@+id/shubhro"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="130dp"
-        android:text="Shubhrojyoti Kabiraj" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_below="@+id/shubhro"
-        android:id="@+id/wd3"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
-        android:text="Designer" />
+            <TextView
+                android:id="@+id/himanshu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ad2email"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="50dp"
+                android:text="Himanshu Gangil" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/wd3"
-        android:id="@+id/wd3email"
-        android:layout_marginStart="130dp"
-        android:text="Email: shubhrojyotikabiraj@gmail.com" />
+            <TextView
+                android:id="@+id/wd1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/himanshu"
+                android:layout_marginStart="130dp"
+                android:text="Web Developer" />
+
+            <TextView
+                android:id="@+id/wd1email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wd1"
+                android:layout_marginStart="130dp"
+                android:text="Email: himanshugangil1999@gmail.com" />
+
+            <TextView
+                android:id="@+id/prashant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wd1email"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="50dp"
+                android:text="Prashant Sagar" />
+
+            <TextView
+                android:id="@+id/wd2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/prashant"
+                android:layout_marginStart="130dp"
+                android:text="Web Developer" />
+
+            <TextView
+                android:id="@+id/wd2email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wd2"
+                android:layout_marginStart="130dp"
+                android:text="Email: prashant.sagar73@gmail.com" />
+
+            <TextView
+                android:id="@+id/shubhro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wd2email"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="50dp"
+                android:text="Shubhrojyoti Kabiraj" />
+
+            <TextView
+                android:id="@+id/wd3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shubhro"
+                android:layout_marginStart="130dp"
+                android:text="Designer" />
+
+            <TextView
+                android:id="@+id/wd3email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wd3"
+                android:layout_marginStart="130dp"
+                android:text="Email: shubhrojyotikabiraj@gmail.com" />
 
 
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/shubhro_image"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_below="@+id/wd3"
+                android:layout_alignLeft="@+id/shubhro"
+                android:layout_marginLeft="-116dp"
+                android:layout_marginTop="-56dp"
+                android:src="@drawable/shubhro"
+                app:civ_border_color="#e67e22"
+                app:civ_border_width="2dp" />
 
-           <de.hdodenhof.circleimageview.CircleImageView
-               xmlns:app="http://schemas.android.com/apk/res-auto"
-               android:id="@+id/shubhro_image"
-               android:layout_width="96dp"
-               android:layout_height="96dp"
-               android:src="@drawable/shubhro"
-               android:layout_below="@+id/wd3"
-               android:layout_alignLeft="@+id/shubhro"
-               android:layout_marginLeft="-116dp"
-               android:layout_marginTop="-56dp"
-               app:civ_border_color="#e67e22"
-               app:civ_border_width="2dp" />
-           <de.hdodenhof.circleimageview.CircleImageView
-               xmlns:app="http://schemas.android.com/apk/res-auto"
-               android:id="@+id/hardik_image"
-               android:layout_width="96dp"
-               android:layout_height="96dp"
-               android:src="@drawable/hardik"
-               android:layout_below="@+id/ad2"
-               android:layout_alignLeft="@+id/shubhro"
-               android:layout_marginLeft="-116dp"
-               android:layout_marginTop="-56dp"
-               app:civ_border_color="#e67e22"
-               app:civ_border_width="2dp" />
-           <de.hdodenhof.circleimageview.CircleImageView
-               xmlns:app="http://schemas.android.com/apk/res-auto"
-               android:id="@+id/prashant_image"
-               android:layout_width="96dp"
-               android:layout_height="96dp"
-               android:layout_below="@+id/wd2"
-               android:layout_alignLeft="@+id/shubhro"
-               android:layout_marginLeft="-116dp"
-               android:layout_marginTop="-56dp"
-               android:src="@drawable/sagarbg"
-               app:civ_border_color="#e67e22"
-               app:civ_border_width="2dp" />
-           <de.hdodenhof.circleimageview.CircleImageView
-               xmlns:app="http://schemas.android.com/apk/res-auto"
-               android:id="@+id/rahul_image"
-               android:layout_width="96dp"
-               android:layout_height="96dp"
-               android:src="@drawable/rahulbg"
-               android:layout_below="@+id/ad1"
-               android:layout_alignLeft="@+id/shubhro"
-               android:layout_marginLeft="-116dp"
-               android:layout_marginTop="-56dp"
-               app:civ_border_color="#e67e22"
-               app:civ_border_width="2dp" />
-           <de.hdodenhof.circleimageview.CircleImageView
-               xmlns:app="http://schemas.android.com/apk/res-auto"
-               android:id="@+id/gangil_image"
-               android:layout_width="96dp"
-               android:layout_height="96dp"
-               android:src="@drawable/gangil"
-               android:layout_below="@+id/wd1"
-               android:layout_alignLeft="@+id/shubhro"
-               android:layout_marginLeft="-116dp"
-               android:layout_marginTop="-56dp"
-               app:civ_border_color="#e67e22"
-               app:civ_border_width="2dp" />
-       </RelativeLayout>
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/hardik_image"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_below="@+id/ad2"
+                android:layout_alignLeft="@+id/shubhro"
+                android:layout_marginLeft="-116dp"
+                android:layout_marginTop="-56dp"
+                android:src="@drawable/hardik"
+                app:civ_border_color="#e67e22"
+                app:civ_border_width="2dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/prashant_image"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_below="@+id/wd2"
+                android:layout_alignLeft="@+id/shubhro"
+                android:layout_marginLeft="-116dp"
+                android:layout_marginTop="-56dp"
+                android:src="@drawable/sagarbg"
+                app:civ_border_color="#e67e22"
+                app:civ_border_width="2dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/rahul_image"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_below="@+id/ad1"
+                android:layout_alignLeft="@+id/shubhro"
+                android:layout_marginLeft="-116dp"
+                android:layout_marginTop="-56dp"
+                android:src="@drawable/rahulbg"
+                app:civ_border_color="#e67e22"
+                app:civ_border_width="2dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/gangil_image"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_below="@+id/wd1"
+                android:layout_alignLeft="@+id/shubhro"
+                android:layout_marginLeft="-116dp"
+                android:layout_marginTop="-56dp"
+                android:src="@drawable/gangil"
+                app:civ_border_color="#e67e22"
+                app:civ_border_width="2dp" />
+        </RelativeLayout>
 
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

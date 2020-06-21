@@ -14,7 +14,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
@@ -29,22 +29,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     DatabaseReference reff;
     String email, S, name;
     int i;
+    ImageButton VideoButton;
     TextView uemail;
-    Button logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences preferences = getSharedPreferences(S,i);
+        name = preferences.getString("Username","No name");
         setContentView(R.layout.activity_main);
         Article = findViewById(R.id.nav_articles);
+        VideoButton = findViewById(R.id.videoButton);
         LayoutInflater inflater = getLayoutInflater();
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         drawer = findViewById(R.id.draw_layout);
         Firebase.setAndroidContext(this);
         FirebaseApp.initializeApp(this);
-        SharedPreferences preferences = getSharedPreferences(S,i);
-        name = preferences.getString("Username","No name");
+
+        VideoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         reff = FirebaseDatabase.getInstance().getReference().child("users").child(name);
         reff.addValueEventListener(new ValueEventListener() {
             @Override
@@ -111,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 SharedPreferences.Editor editor = getSharedPreferences(S,i).edit();
                 editor.putString("Username","No name");
                 editor.apply();
-                Intent logoutIntent = new Intent(MainActivity.this,Login.class);
+                Intent logoutIntent = new Intent(MainActivity.this, Login.class);
                 startActivity(logoutIntent);
                 finish();
                 break;
@@ -119,7 +127,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
 
 
     @Override
