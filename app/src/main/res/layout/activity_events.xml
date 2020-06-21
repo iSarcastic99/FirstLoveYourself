@@ -24,14 +24,13 @@
         android:id="@+id/changeloc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="310dp"
         android:layout_marginTop="34dp"
         android:layout_marginBottom="3dp"
         android:src="@drawable/change_location"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toEndOf="@+id/backbutton"
         app:layout_constraintTop_toTopOf="parent" />
 
