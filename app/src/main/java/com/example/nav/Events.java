@@ -40,7 +40,7 @@ public class Events extends AppCompatActivity {
     String Date1, Date2, Date3, Date4, Date5;
     String Time1, Time2, Time3, Time4, Time5;
     ProgressDialog pd;
-    ImageView backButton;
+    ImageView backButton, changeButton;
     int i, j;
 
     @Override
@@ -73,6 +73,7 @@ public class Events extends AppCompatActivity {
         EventImage4 = findViewById(R.id.eventimage4);
         EventImage5 = findViewById(R.id.eventimage5);
         backButton = findViewById(R.id.backbutton);
+        changeButton = findViewById(R.id.changeloc);
         pd = new ProgressDialog(this);
         pd.setMessage("Loading...");
         pd.show();
@@ -83,6 +84,21 @@ public class Events extends AppCompatActivity {
                     .permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
+
+        changeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Events.this, EventCities.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         reff = FirebaseDatabase.getInstance().getReference();
         reff.addValueEventListener(new ValueEventListener() {
@@ -99,6 +115,7 @@ public class Events extends AppCompatActivity {
                             Time1 = dataSnapshot.child("events").child(city).child("Event1").child("Time").getValue().toString();
                             Date1 = dataSnapshot.child("events").child(city).child("Event1").child("Date").getValue().toString();
                             backButton.setVisibility(View.VISIBLE);
+                            changeButton.setVisibility(View.VISIBLE);
                             EventTV1.setVisibility(View.VISIBLE);
                             EventImage1.setVisibility(View.VISIBLE);
                             TimeTV1.setVisibility(View.VISIBLE);
@@ -108,6 +125,7 @@ public class Events extends AppCompatActivity {
                             EventTV1.setText(title1);
                             EventImage1.setImageBitmap(getImageBitmap(imageURL1));
                         } catch(Exception e) {
+                            Toast.makeText(Events.this, "Currently, there are no events", Toast.LENGTH_SHORT).show();
                             pd.dismiss();
                             finish();
                         }

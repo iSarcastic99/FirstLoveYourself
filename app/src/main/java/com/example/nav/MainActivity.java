@@ -2,26 +2,20 @@ package com.example.nav;
 
 import android.content.Intent;
 import androidx.annotation.NonNull;
-
 import com.firebase.client.Firebase;
-import com.firebase.client.FirebaseError;
 import com.google.android.material.navigation.NavigationView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
-
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -64,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             }
         });
+
         NavigationView navigationView = findViewById(R.id.nav_view);
         View myview = inflater.inflate(R.layout.nav_header,null);
         TextView uname = navigationView.getHeaderView(0).findViewById(R.id.name_of_user);
@@ -81,11 +76,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (menuItem.getItemId()){
 
             case R.id.nav_videos:
-               Intent intent1 = new Intent(MainActivity.this,videos.class);
+               Intent intent1 = new Intent(MainActivity.this, videos.class);
                startActivity(intent1);
                break;
             case R.id.nav_world_tour:
-                Intent intent4 = new Intent(MainActivity.this,World_Tour.class);
+                Intent intent4 = new Intent(MainActivity.this, World_Tour.class);
                 startActivity(intent4);
                 break;
             case R.id.nav_chat:
@@ -105,11 +100,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent5);
                 break;
             case R.id.nav_contact_us:
-              Intent contactIntent = new Intent(MainActivity.this,ContactUs.class);
+              Intent contactIntent = new Intent(MainActivity.this, ContactUs.class);
               startActivity(contactIntent);
                 break;
             case R.id.nav_feedback:
-                Intent feedbackIntent = new Intent(MainActivity.this,Feedback.class);
+                Intent feedbackIntent = new Intent(MainActivity.this, Feedback.class);
                 startActivity(feedbackIntent);
                 break;
             case R.id.logout_button:
@@ -135,5 +130,4 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
               finish();
         }
     }
-
 }

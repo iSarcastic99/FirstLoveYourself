@@ -70,7 +70,8 @@ public class EventCities extends AppCompatActivity {
                     public void onClick(View v) {
                         firebase.child(Username).child("City").setValue(CityButton1.getText().toString());
                         saveData(CityButton1.getText().toString());
-                        Intent intent = new Intent(EventCities.this, Events.class);
+                        Toast.makeText(EventCities.this, "Your location has been updated successfully", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(EventCities.this, MainActivity.class);
                         startActivity(intent);
                         finish();
                     }
@@ -81,7 +82,8 @@ public class EventCities extends AppCompatActivity {
                     public void onClick(View v) {
                         firebase.child(Username).child("City").setValue(CityButton2.getText().toString());
                         saveData(CityButton2.getText().toString());
-                        Intent intent = new Intent(EventCities.this, Events.class);
+                        Toast.makeText(EventCities.this, "Your location has been updated successfully", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(EventCities.this, MainActivity.class);
                         startActivity(intent);
                         finish();
                     }
@@ -92,7 +94,8 @@ public class EventCities extends AppCompatActivity {
                     public void onClick(View v) {
                         firebase.child(Username).child("City").setValue(CityButton3.getText().toString());
                         saveData(CityButton3.getText().toString());
-                        Intent intent = new Intent(EventCities.this, Events.class);
+                        Toast.makeText(EventCities.this, "Your location has been updated successfully", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(EventCities.this, MainActivity.class);
                         startActivity(intent);
                         finish();
                     }
@@ -103,7 +106,8 @@ public class EventCities extends AppCompatActivity {
                     public void onClick(View v) {
                         firebase.child(Username).child("City").setValue(CityButton4.getText().toString());
                         saveData(CityButton4.getText().toString());
-                        Intent intent = new Intent(EventCities.this, Events.class);
+                        Toast.makeText(EventCities.this, "Your location has been updated successfully", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(EventCities.this, MainActivity.class);
                         startActivity(intent);
                         finish();
                     }
@@ -114,7 +118,8 @@ public class EventCities extends AppCompatActivity {
                     public void onClick(View v) {
                         firebase.child(Username).child("City").setValue(CityButton5.getText().toString());
                         saveData(CityButton5.getText().toString());
-                        Intent intent = new Intent(EventCities.this, Events.class);
+                        Toast.makeText(EventCities.this, "Your location has been updated successfully", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(EventCities.this, MainActivity.class);
                         startActivity(intent);
                         finish();
                     }
@@ -125,7 +130,8 @@ public class EventCities extends AppCompatActivity {
                     public void onClick(View v) {
                         firebase.child(Username).child("City").setValue(CityButton6.getText().toString());
                         saveData(CityButton6.getText().toString());
-                        Intent intent = new Intent(EventCities.this, Events.class);
+                        Toast.makeText(EventCities.this, "Your location has been updated successfully", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(EventCities.this, MainActivity.class);
                         startActivity(intent);
                         finish();
                     }
@@ -136,7 +142,8 @@ public class EventCities extends AppCompatActivity {
                     public void onClick(View v) {
                         firebase.child(Username).child("City").setValue(CityButton7.getText().toString());
                         saveData(CityButton7.getText().toString());
-                        Intent intent = new Intent(EventCities.this, Events.class);
+                        Toast.makeText(EventCities.this, "Your location has been updated successfully", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(EventCities.this, MainActivity.class);
                         startActivity(intent);
                         finish();
                     }
