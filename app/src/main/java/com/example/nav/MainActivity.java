@@ -130,4 +130,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
               finish();
         }
     }
+
+    public void doSomething(View view) {
+        Intent intent = new Intent(MainActivity.this, Counselor.class);
+        startActivity(intent);
+    }
 }
