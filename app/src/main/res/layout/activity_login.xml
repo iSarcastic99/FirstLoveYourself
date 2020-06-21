@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -21,7 +21,13 @@
         android:layout_marginTop="380dp"
         android:hint="@string/enter_username"
         android:inputType="text"
-        android:maxLines="1" />
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintHorizontal_bias="0.03"/>
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
@@ -29,7 +35,13 @@
         android:hint="@string/enter_password"
         android:layout_marginTop="10dp"
         android:inputType="textPassword"
-        android:maxLines="1" />
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.77"
+        app:layout_constraintHorizontal_bias="0.03"/>
 
 
     <Button
@@ -38,7 +50,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="#30CCB928"
-        android:text="Login" />
+        android:text="Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85"
+        app:layout_constraintHorizontal_bias="0.03"/>
 
 
     <TextView
@@ -48,7 +66,13 @@
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="Register"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:layout_constraintHorizontal_bias="0.03"/>
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
