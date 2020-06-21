@@ -84,11 +84,13 @@ public class Events extends AppCompatActivity {
                     .permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
+
         changeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Events.this, EventCities.class);
                 startActivity(intent);
+                finish();
             }
         });
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -123,6 +125,7 @@ public class Events extends AppCompatActivity {
                             EventTV1.setText(title1);
                             EventImage1.setImageBitmap(getImageBitmap(imageURL1));
                         } catch(Exception e) {
+                            Toast.makeText(Events.this, "Currently, there are no events", Toast.LENGTH_SHORT).show();
                             pd.dismiss();
                             finish();
                         }

@@ -50,19 +50,20 @@
     <ScrollView
         android:id="@+id/scrollView5"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title"
-        app:layout_constraintVertical_bias="0.25"
-        android:layout_marginTop="10dip"
-        android:layout_marginBottom="100dip">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.30"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
             android:orientation="vertical">
 
             <ImageView
@@ -70,6 +71,8 @@
                 android:layout_width="350dp"
                 android:layout_height="200dp"
                 android:layout_marginStart="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="10dp"
                 android:layout_marginTop="15dp"
                 android:scaleType="fitXY"
                 android:visibility="gone" />
@@ -88,7 +91,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="5dp"
                 android:textSize="20sp"
                 android:visibility="gone" />
 
@@ -97,7 +99,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="5dp"
                 android:textSize="20sp"
                 android:visibility="gone" />
 
@@ -105,7 +106,9 @@
                 android:id="@+id/eventimage2"
                 android:layout_width="350dp"
                 android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginTop="10dp"
                 android:scaleType="fitXY"
                 android:visibility="gone" />
@@ -124,7 +127,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="5dp"
                 android:textSize="20sp"
                 android:visibility="gone" />
 
@@ -133,7 +135,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="5dp"
                 android:textSize="20sp"
                 android:visibility="gone" />
 
@@ -142,6 +143,8 @@
                 android:layout_width="350dp"
                 android:layout_height="200dp"
                 android:layout_marginStart="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="10dp"
                 android:layout_marginTop="10dp"
                 android:scaleType="fitXY"
                 android:visibility="gone" />
@@ -160,7 +163,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="5dp"
                 android:textSize="20sp"
                 android:visibility="gone" />
 
@@ -169,13 +171,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="5dp"
                 android:textSize="20sp"
                 android:visibility="gone" />
 
             <ImageView
                 android:id="@+id/eventimage4"
                 android:layout_width="350dp"
+                android:layout_gravity="center_horizontal"
                 android:layout_height="200dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
@@ -196,7 +198,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="5dp"
                 android:textSize="20sp"
                 android:visibility="gone" />
 
@@ -205,7 +206,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="5dp"
                 android:textSize="20sp"
                 android:visibility="gone" />
 
@@ -213,7 +213,9 @@
                 android:id="@+id/eventimage5"
                 android:layout_width="350dp"
                 android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginTop="10dp"
                 android:scaleType="fitXY"
                 android:visibility="gone" />
@@ -232,7 +234,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="5dp"
                 android:textSize="20sp"
                 android:visibility="gone" />
 
@@ -241,7 +242,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="5dp"
                 android:textSize="20sp"
                 android:visibility="gone" />
 
