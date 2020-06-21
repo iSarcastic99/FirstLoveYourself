@@ -74,6 +74,7 @@ public class Motivational_Video_1 extends AppCompatActivity {
         backmot1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                imgplay.performClick();
                 finish();
             }
         });
@@ -179,6 +180,7 @@ public class Motivational_Video_1 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         isPlaying = false;
+        imgplay.performClick();
         super.onBackPressed();
     }
     public void getVideo(final String videoNumber){
