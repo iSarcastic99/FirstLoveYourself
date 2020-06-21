@@ -15,6 +15,14 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
         <TextView
             android:id="@+id/tv2"
             android:layout_width="349dp"
@@ -78,13 +86,7 @@
             android:layout_marginTop="300dp"
             android:text="Logout" />
 
-        <FrameLayout
-            android:id="@+id/fragment_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-
-        </FrameLayout>
 
         <TextView
             android:id="@+id/welcome"
@@ -94,14 +96,7 @@
             android:layout_marginTop="200dp"
             android:text="Welcome" />
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="#E39460"
-            android:elevation="4dp"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
 
     </LinearLayout>
 
@@ -115,5 +110,6 @@
         app:itemIconTint="#EC917A"
         app:itemTextColor="#6B6767"
         app:menu="@menu/drawer_menu" />
+
 
 </androidx.drawerlayout.widget.DrawerLayout>
