@@ -1,36 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/bgth"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgs"
     tools:ignore="MissingDefaultResource">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="140dp"
             android:textSize="30sp" />
+
         <ImageView
+            android:id="@+id/counselorback"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/counselorback"
-            android:src="@drawable/ic_keyboard_backspace_black_24dp"
             android:layout_marginTop="-30dp"
-            android:layout_marginStart="10dp"/>
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_keyboard_backspace_black_24dp" />
+
         <ImageView
             android:id="@+id/counselorimage"
             android:layout_width="400dp"
             android:layout_height="300dp"
-            android:scaleType="fitXY"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="20dp"
-            android:layout_marginStart="5dp"/>
+            android:scaleType="fitXY" />
 
         <TextView
             android:id="@+id/description"
@@ -39,21 +42,21 @@
             android:layout_marginStart="5dp" />
 
         <Button
+            android:id="@+id/call"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/call"
             android:layout_marginStart="30dp"
-            android:visibility="invisible"
-            android:text="Call"/>
+            android:text="Call"
+            android:visibility="invisible" />
 
         <Button
+            android:id="@+id/mail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/mail"
             android:layout_marginStart="200dp"
             android:layout_marginTop="-50dp"
-            android:visibility="invisible"
-            android:text="Send Mail"/>
+            android:text="Send Mail"
+            android:visibility="invisible" />
 
     </LinearLayout>
 
