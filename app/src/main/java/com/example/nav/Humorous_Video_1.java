@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -68,6 +69,17 @@ public class Humorous_Video_1 extends AppCompatActivity {
             }
         });
 
+        videoView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(!isGone)
+                    hideViews();
+                else
+                    showViews();
+                return false;
+            }
+        });
+
         videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
@@ -75,6 +87,7 @@ public class Humorous_Video_1 extends AppCompatActivity {
                     dur = mp.getDuration() / 1000;
                     String duration1 = String.format("%02d:%02d", dur / 60, dur % 60);
                     tot.setText(duration1);
+                    autoHide();
                     pd.dismiss();
                 }catch(Exception e){
                     tot.setVisibility(View.INVISIBLE);
@@ -95,7 +108,6 @@ public class Humorous_Video_1 extends AppCompatActivity {
                             }
                             if (what == MediaPlayer.MEDIA_INFO_BUFFERING_END){
                                 pd.dismiss();
-                                autoHide();
                             }
                             return false;
                         }
