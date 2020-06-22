@@ -6,9 +6,11 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,9 +26,10 @@ import java.net.URL;
 import java.net.URLConnection;
 
 public class World_Tour extends AppCompatActivity {
-    ImageView backworld, PlaceImage1, PlaceImage2, PlaceImage3, PlaceImage4, PlaceImage5, PlaceImage6, PlaceImage7, PlaceImage8, PlaceImage9, PlaceImage10;
+    ImageView PlaceImage1, PlaceImage2, PlaceImage3, PlaceImage4, PlaceImage5, PlaceImage6, PlaceImage7, PlaceImage8, PlaceImage9, PlaceImage10;
+    Button backworld;
     DatabaseReference reff;
-    TextView PlaceTV1, PlaceTV2, PlaceTV3, PlaceTV4, PlaceTV5, PlaceTV6, PlaceTV7, PlaceTV8, PlaceTV9, PlaceTV10, InsideTV, OutsideTV;
+    TextView PlaceTV1, PlaceTV2, PlaceTV3, PlaceTV4, PlaceTV5, PlaceTV6, PlaceTV7, PlaceTV8, PlaceTV9, PlaceTV10, InsideTV;
     ProgressDialog pd, pd2;
     String Title1, Title2, Title3, Title4, Title5, Title6, Title7, Title8, Title9, Title10, ImageURL1, ImageURL2, ImageURL3, ImageURL4, ImageURL5, ImageURL6, ImageURL7, ImageURL8, ImageURL9, ImageURL10;
 
@@ -55,8 +58,7 @@ public class World_Tour extends AppCompatActivity {
         PlaceTV8 = findViewById(R.id.placetv8);
         PlaceTV9 = findViewById(R.id.placetv9);
         PlaceTV10 = findViewById(R.id.placetv10);
-        InsideTV = findViewById(R.id.inside);
-        OutsideTV = findViewById(R.id.outside);
+        InsideTV = findViewById(R.id.wtitle);
 
         backworld.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +72,7 @@ public class World_Tour extends AppCompatActivity {
         pd2.setMessage("Loading...");
         pd.show();
 
-        int SDK_INT = android.os.Build.VERSION.SDK_INT;
+        int SDK_INT = Build.VERSION.SDK_INT;
         if (SDK_INT > 8)
         {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
@@ -123,7 +125,6 @@ public class World_Tour extends AppCompatActivity {
                 PlaceImage10.setImageBitmap(getImageBitmap(ImageURL10));
                 pd.dismiss();
                 InsideTV.setVisibility(View.VISIBLE);
-                OutsideTV.setVisibility(View.VISIBLE);
             }
 
             @Override
