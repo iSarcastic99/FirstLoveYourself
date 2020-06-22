@@ -52,20 +52,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.75"
-        app:layout_constraintTop_toBottomOf="@id/videotitle" />
+        app:layout_constraintTop_toBottomOf="@id/videotitle"/>
 
-    <ImageView
-        android:id="@+id/humfs1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/mute"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/playimg1"
-        app:layout_constraintStart_toStartOf="@id/playimg1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.55"
-        app:layout_constraintTop_toBottomOf="@+id/videotitle" />
 
     <TextView
         android:id="@+id/humcurrent1"

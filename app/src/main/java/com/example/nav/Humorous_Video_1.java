@@ -8,6 +8,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -27,14 +28,14 @@ import com.google.firebase.database.ValueEventListener;
 public class Humorous_Video_1 extends AppCompatActivity {
     VideoView videoView;
     ProgressDialog pd;
-    ImageView imgplay, fs, backhum1;
+    ImageView imgplay, backhum1;
     ProgressBar pb;
     Intent intent;
     TextView curr, tot, videoTitle;
     int dur, current=0;
     String Title, URL, VideoNumber;
     DatabaseReference reff;
-    boolean isPlaying = false;
+    boolean isPlaying = false, isGone = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,11 +54,9 @@ public class Humorous_Video_1 extends AppCompatActivity {
         pb = findViewById(R.id.humprogressBar1);
         pb.setMax(100);
         curr = findViewById(R.id.humcurrent1);
-        fs = findViewById(R.id.humfs1);
         curr = findViewById(R.id.humcurrent1);
         tot = findViewById(R.id.humtotal1);
         imgplay = findViewById(R.id.playimg1);
-
         intent = getIntent();
         VideoNumber = intent.getStringExtra("videoNumber");
         getVideo(VideoNumber);
@@ -80,7 +79,6 @@ public class Humorous_Video_1 extends AppCompatActivity {
                 }catch(Exception e){
                     tot.setVisibility(View.INVISIBLE);
                 }
-
             }
         });
         imgplay.setOnClickListener(new View.OnClickListener() {
@@ -97,6 +95,7 @@ public class Humorous_Video_1 extends AppCompatActivity {
                             }
                             if (what == MediaPlayer.MEDIA_INFO_BUFFERING_END){
                                 pd.dismiss();
+                                autoHide();
                             }
                             return false;
                         }
@@ -182,5 +181,33 @@ public class Humorous_Video_1 extends AppCompatActivity {
 
             }
         });
+    }
+    public void hideViews(){
+        imgplay.setVisibility(View.GONE);
+        backhum1.setVisibility(View.GONE);
+        curr.setVisibility(View.GONE);
+        videoTitle.setVisibility(View.GONE);
+        tot.setVisibility(View.GONE);
+        pb.setVisibility(View.GONE);
+        isGone = true;
+    }
+
+    public void showViews(){
+        imgplay.setVisibility(View.VISIBLE);
+        backhum1.setVisibility(View.VISIBLE);
+        curr.setVisibility(View.VISIBLE);
+        videoTitle.setVisibility(View.VISIBLE);
+        tot.setVisibility(View.VISIBLE);
+        pb.setVisibility(View.VISIBLE);
+        isGone = false;
+        autoHide();
+    }
+    public void autoHide(){
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                hideViews();
+            }
+        }, 3000);
     }
 }

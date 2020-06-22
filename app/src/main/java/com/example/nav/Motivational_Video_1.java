@@ -9,6 +9,8 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -27,21 +29,21 @@ import com.google.firebase.database.ValueEventListener;
 public class Motivational_Video_1 extends AppCompatActivity {
     VideoView videoView;
     ProgressDialog pd;
-    ImageView imgplay, fs, backmot1;
+    ImageView imgplay, backmot1;
     ProgressBar pb;
     Intent intent;
     TextView curr, tot, videoTitle;
     int dur, current=0;
     String Title, URL, VideoNumber;
     DatabaseReference reff;
-    boolean isPlaying = false;
+    boolean isPlaying = false, isGone = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_motivational__video_1);
         Firebase.setAndroidContext(this);
         pd = new ProgressDialog(this);
@@ -53,13 +55,12 @@ public class Motivational_Video_1 extends AppCompatActivity {
         pb = findViewById(R.id.motprogressBar1);
         pb.setMax(100);
         curr = findViewById(R.id.motcurrent1);
-        fs = findViewById(R.id.motfs1);
         tot = findViewById(R.id.mottotal1);
         imgplay = findViewById(R.id.playimg1);
-
         intent = getIntent();
         VideoNumber = intent.getStringExtra("videoNumber");
         getVideo(VideoNumber);
+
         backmot1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,6 +68,14 @@ public class Motivational_Video_1 extends AppCompatActivity {
                 finish();
             }
         });
+
+     videoView.setOnTouchListener(new View.OnTouchListener() {
+         @Override
+         public boolean onTouch(View v, MotionEvent event) {
+             finish();
+             return false;
+         }
+     });
 
         videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
@@ -96,6 +105,7 @@ public class Motivational_Video_1 extends AppCompatActivity {
                             }
                             if (what == MediaPlayer.MEDIA_INFO_BUFFERING_END){
                                 pd.dismiss();
+                                autoHide();
                             }
                             return false;
                         }
@@ -114,7 +124,6 @@ public class Motivational_Video_1 extends AppCompatActivity {
 
         });
         imgplay.performClick();
-
 
     }
 
@@ -192,5 +201,34 @@ public class Motivational_Video_1 extends AppCompatActivity {
 
             }
         });
+    }
+    public void hideViews(){
+        imgplay.setVisibility(View.GONE);
+        backmot1.setVisibility(View.GONE);
+        curr.setVisibility(View.GONE);
+        videoTitle.setVisibility(View.GONE);
+        tot.setVisibility(View.GONE);
+        pb.setVisibility(View.GONE);
+        isGone = true;
+    }
+
+    public void showViews(){
+        imgplay.setVisibility(View.VISIBLE);
+        backmot1.setVisibility(View.VISIBLE);
+        curr.setVisibility(View.VISIBLE);
+        videoTitle.setVisibility(View.VISIBLE);
+        tot.setVisibility(View.VISIBLE);
+        pb.setVisibility(View.VISIBLE);
+        isGone = false;
+        autoHide();
+    }
+    public void autoHide(){
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                hideViews();
+            }
+        }, 3000);
+        isGone = true;
     }
 }
