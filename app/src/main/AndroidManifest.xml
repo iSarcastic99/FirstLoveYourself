@@ -48,9 +48,6 @@
             android:name=".World_Tour"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ContactUs"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".Feedback"
             android:screenOrientation="portrait" />
         <activity

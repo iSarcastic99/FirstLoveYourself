@@ -9,6 +9,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -99,8 +100,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent5);
                 break;
             case R.id.nav_contact_us:
-              Intent contactIntent = new Intent(MainActivity.this, ContactUs.class);
-              startActivity(contactIntent);
+                String recipient = "firstloveyourself1999@gmail.com";
+                Intent mailIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:"));
+                mailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{recipient});
+                startActivity(mailIntent);
                 break;
             case R.id.nav_feedback:
                 Intent feedbackIntent = new Intent(MainActivity.this, Feedback.class);
