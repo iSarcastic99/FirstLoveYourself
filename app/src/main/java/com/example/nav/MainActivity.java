@@ -68,13 +68,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawer,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()){
-
             case R.id.nav_videos:
                Intent intent1 = new Intent(MainActivity.this, videos.class);
                startActivity(intent1);
@@ -130,10 +128,5 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else {
               finish();
         }
-    }
-
-    public void doSomething(View view) {
-        Intent intent = new Intent(MainActivity.this, Counselor.class);
-        startActivity(intent);
     }
 }
