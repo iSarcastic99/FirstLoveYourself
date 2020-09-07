@@ -51,10 +51,10 @@ public class Login extends AppCompatActivity {
                 pass = password.getText().toString();
 
                 if(user.equals("")){
-                    username.setError("can't be blank");
+                    username.setError("Can't be blank");
                 }
                 else if(pass.equals("")){
-                    password.setError("can't be blank");
+                    password.setError("Can't be blank");
                 }
                 else{
                     String url = "https://flyapp-84c6a.firebaseio.com/users.json";
