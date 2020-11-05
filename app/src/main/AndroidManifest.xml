@@ -42,10 +42,11 @@
             android:name=".Login"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Places"
-            android:screenOrientation="portrait" />
+            android:name=".world_tour.WorldTourActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/WorldTourTheme"/>
         <activity
-            android:name=".World_Tour"
+            android:name=".Places"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Feedback"

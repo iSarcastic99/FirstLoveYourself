@@ -2,6 +2,8 @@ package com.example.nav;
 
 import android.content.Intent;
 import androidx.annotation.NonNull;
+
+import com.example.nav.world_tour.WorldTourActivity;
 import com.firebase.client.Firebase;
 import com.google.android.material.navigation.NavigationView;
 import androidx.core.view.GravityCompat;
@@ -78,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                startActivity(intent1);
                break;
             case R.id.nav_world_tour:
-                Intent intent4 = new Intent(MainActivity.this, World_Tour.class);
+                Intent intent4 = new Intent(MainActivity.this, WorldTourActivity.class);
                 startActivity(intent4);
                 break;
             case R.id.nav_chat:

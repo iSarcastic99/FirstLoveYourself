@@ -31,8 +31,9 @@ public class Places extends AppCompatActivity {
     DatabaseReference reff;
     TextView TitleTV, DescriptionTV;
     Intent intent;
-    String Title, Description, MapURL, VisitURL, PlaceNumber, ImageURL;
+    String Title, Description, MapURL, VisitURL, PlaceNumber;
     ProgressDialog pd;
+    Bitmap bitmap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +46,8 @@ public class Places extends AppCompatActivity {
         mapbutton = findViewById(R.id.map);
         placeimage = findViewById(R.id.placeimage);
         intent = getIntent();
-        PlaceNumber = intent.getStringExtra("placeNumber");
+        PlaceNumber = intent.getStringExtra("place");
+        bitmap = (Bitmap) intent.getParcelableExtra("image");
         pd = new ProgressDialog(this);
         pd.setMessage("Loading...");
         pd.show();
@@ -56,7 +58,7 @@ public class Places extends AppCompatActivity {
                     .permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
-        reff = FirebaseDatabase.getInstance().getReference().child("worldtour").child("Place"+PlaceNumber);
+        reff = FirebaseDatabase.getInstance().getReference().child("worldtour").child(PlaceNumber);
         reff.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -64,10 +66,9 @@ public class Places extends AppCompatActivity {
                 Description = dataSnapshot.child("Description").getValue().toString();
                 VisitURL = dataSnapshot.child("VisitURL").getValue().toString();
                 MapURL = dataSnapshot.child("MapURL").getValue().toString();
-                ImageURL = dataSnapshot.child("ImageURL").getValue().toString();
                 TitleTV.setText(Title);
                 DescriptionTV.setText(Description);
-                placeimage.setImageBitmap(getImageBitmap(ImageURL));
+                placeimage.setImageBitmap(bitmap);
                 visitbutton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
