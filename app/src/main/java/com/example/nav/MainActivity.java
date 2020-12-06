@@ -100,10 +100,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent5);
                 break;
             case R.id.nav_contact_us:
-                String recipient = "firstloveyourself1999@gmail.com";
-                Intent mailIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:"));
-                mailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{recipient});
-                startActivity(mailIntent);
+                Intent contactIntent = new Intent(MainActivity.this, ContactUs.class);
+                startActivity(contactIntent);
                 break;
             case R.id.nav_feedback:
                 Intent feedbackIntent = new Intent(MainActivity.this, Feedback.class);

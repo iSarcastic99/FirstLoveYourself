@@ -12,6 +12,7 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ContactUs"></activity>
         <activity
             android:name=".Events"
             android:screenOrientation="portrait" />
@@ -44,7 +45,7 @@
         <activity
             android:name=".world_tour.WorldTourActivity"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/WorldTourTheme"/>
+            android:theme="@style/WorldTourTheme" />
         <activity
             android:name=".Places"
             android:screenOrientation="portrait" />
